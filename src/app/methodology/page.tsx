@@ -1,24 +1,67 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+const PAGE_URL = 'https://theintegrityframework.org/methodology';
+const VERSION = '0.1';
+const LAST_UPDATED = '2026-04-25';
+
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
     'How the Integrity Framework Directory evaluates listings: tier gates, verification process, re-scan cadence, delisting policy, and operator-conflict-of-interest handling.',
   alternates: { canonical: '/methodology' },
+  openGraph: {
+    title: 'Integrity Framework Directory Methodology',
+    description:
+      'How the Integrity Framework Directory evaluates listings. Tier gates, verification, re-scan, delisting. Versioned. Public.',
+    url: PAGE_URL,
+    type: 'article',
+    siteName: 'The Integrity Framework',
+    publishedTime: `${LAST_UPDATED}T00:00:00Z`,
+  },
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Integrity Framework Directory Methodology',
+  description:
+    'How the directory evaluates listings: tier gates, verification, re-scan cadence, delisting policy, and operator-conflict-of-interest handling.',
+  author: { '@type': 'Organization', name: 'Startvest LLC', url: 'https://startvest.ai' },
+  publisher: { '@type': 'Organization', name: 'Startvest LLC' },
+  datePublished: `${LAST_UPDATED}T00:00:00Z`,
+  dateModified: `${LAST_UPDATED}T00:00:00Z`,
+  inLanguage: 'en-US',
+  mainEntityOfPage: PAGE_URL,
+  url: PAGE_URL,
+  isBasedOn: 'https://claritylift.ai/framework/v1',
+  version: VERSION,
 };
 
 export default function MethodologyPage() {
   return (
-    <article className="container-wide py-16 md:py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <article className="container-wide py-16 md:py-20">
       <header className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-4">
-          Methodology
+          Methodology · v{VERSION}
         </p>
         <h1>How the directory evaluates listings</h1>
-        <p className="mt-6 text-lg text-surface-600">
-          The directory publishes a tier badge per product. This page documents exactly how a listing
-          gets that badge, how it is verified, and how it can lose it. Nothing else governs the badge.
+        {/*
+          Direct-answer paragraph optimized for AI Overview / Perplexity citation:
+          ~60 words, the named entity in the first sentence, single extractable
+          block stating exactly how the directory works.
+        */}
+        <p className="mt-6 text-lg text-surface-700 leading-relaxed">
+          <strong>The Integrity Framework Directory</strong> evaluates listings against two tier
+          gates. Bronze requires a public INTEGRITY.md self-mapping the framework&apos;s six Layer 1
+          vetoes. Silver requires Bronze plus either an integrity-cli green run or a versioned
+          methodology page. Every listing is re-scanned quarterly, on framework version bumps,
+          and on triggered review. Delistings are published with a public note.
         </p>
       </header>
 
@@ -157,6 +200,7 @@ export default function MethodologyPage() {
       <p className="mt-16 text-sm text-surface-500">
         Questions about the methodology? <Link href="/submit">Submit a question or correction</Link>.
       </p>
-    </article>
+      </article>
+    </>
   );
 }
