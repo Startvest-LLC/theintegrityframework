@@ -24,6 +24,29 @@
       "lastRescannedDate": "2026-04-26",
       "state": "active",
       "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2 of the directory's INTEGRITY.md. Methodology page at /methodology carries Version + Changelog headings; integrity statement at /integrity maps all six Layer 1 vetoes."
+    },
+    {
+      "slug": "adacompliancedocs",
+      "name": "adacompliancedocs",
+      "description": "ADA / WCAG compliance documentation tooling. Court-ready good-faith effort record. Built on the inverse premise of overlay vendors.",
+      "homepageUrl": "https://www.adacompliancedocs.com",
+      "integrityMdUrl": "https://www.adacompliancedocs.com/integrity",
+      "silverCredential": {
+        "kind": "methodology-page",
+        "url": "https://www.adacompliancedocs.com/methodology"
+      },
+      "tier": "silver",
+      "license": "closed-source",
+      "category": "AI for compliance & trust",
+      "operator": {
+        "name": "Startvest LLC",
+        "isDirectoryOperator": true,
+        "url": "https://startvest.ai"
+      },
+      "firstListedDate": "2026-04-26",
+      "lastRescannedDate": "2026-04-26",
+      "state": "active",
+      "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Methodology v1.0 and integrity statement both versioned with changelog. Conformance-claim guard (CRIT-SV-CONFORMANCE-CLAIM-GUARD) blocks 'full' publishes when critical axe findings remain open."
     }
   ]
 }
