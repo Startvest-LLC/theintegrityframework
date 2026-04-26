@@ -1,5 +1,30 @@
 {
   "version": "0.1",
-  "lastUpdated": "2026-04-25",
-  "listings": []
+  "lastUpdated": "2026-04-26",
+  "listings": [
+    {
+      "slug": "claritylift",
+      "name": "ClarityLift",
+      "description": "Organizational health intelligence from communication signals. No surveys, no surveillance.",
+      "homepageUrl": "https://claritylift.ai",
+      "integrityMdUrl": "https://claritylift.ai/integrity",
+      "silverCredential": {
+        "kind": "methodology-page",
+        "url": "https://claritylift.ai/methodology"
+      },
+      "tier": "silver",
+      "license": "closed-source",
+      "category": "AI for HR & people ops",
+      "operator": {
+        "name": "Startvest LLC",
+        "isDirectoryOperator": true,
+        "url": "https://startvest.ai"
+      },
+      "firstListedDate": "2026-04-26",
+      "lastRescannedDate": "2026-04-26",
+      "state": "active",
+      "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2 of the directory's INTEGRITY.md. Methodology page at /methodology carries Version + Changelog headings; integrity statement at /integrity maps all six Layer 1 vetoes."
+    }
+  ]
 }
+
