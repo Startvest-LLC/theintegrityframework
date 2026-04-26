@@ -19,3 +19,7 @@ Thumbs.db
 
 next-env.d.ts
 *.tsbuildinfo
+
+# Re-scan reports (CI artifacts, not source)
+rescan-report.json
+rescan-report.md

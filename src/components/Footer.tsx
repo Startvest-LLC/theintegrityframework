@@ -17,6 +17,7 @@ export function Footer() {
             <li><Link href="/listings" className="text-surface-700 no-underline hover:text-brand-700">Listings</Link></li>
             <li><Link href="/submit" className="text-surface-700 no-underline hover:text-brand-700">Submit a product</Link></li>
             <li><Link href="/methodology" className="text-surface-700 no-underline hover:text-brand-700">Methodology</Link></li>
+            <li><Link href="/removed" className="text-surface-700 no-underline hover:text-brand-700">Removed listings</Link></li>
           </ul>
         </div>
         <div>
@@ -24,6 +25,7 @@ export function Footer() {
           <ul className="space-y-1">
             <li><Link href="/framework" className="text-surface-700 no-underline hover:text-brand-700">The Integrity Framework</Link></li>
             <li><a href="https://claritylift.ai/framework" className="text-surface-700 no-underline hover:text-brand-700">Canonical spec</a></li>
+            <li><Link href="/changelog" className="text-surface-700 no-underline hover:text-brand-700">Changelog</Link></li>
             <li><a href="https://github.com/Startvest-LLC/theintegrityframework" className="text-surface-700 no-underline hover:text-brand-700">Source on GitHub</a></li>
           </ul>
         </div>
