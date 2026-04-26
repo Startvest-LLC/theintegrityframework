@@ -23,7 +23,8 @@ export function Footer() {
           <div className="font-semibold text-surface-900 mb-2">Framework</div>
           <ul className="space-y-1">
             <li><Link href="/framework" className="text-surface-700 no-underline hover:text-brand-700">The Integrity Framework</Link></li>
-            <li><Link href="/framework/changelog" className="text-surface-700 no-underline hover:text-brand-700">Changelog</Link></li>
+            <li><a href="https://claritylift.ai/framework" className="text-surface-700 no-underline hover:text-brand-700">Canonical spec</a></li>
+            <li><a href="https://github.com/Startvest-LLC/theintegrityframework" className="text-surface-700 no-underline hover:text-brand-700">Source on GitHub</a></li>
           </ul>
         </div>
         <div>
