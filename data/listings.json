@@ -70,6 +70,25 @@
       "lastRescannedDate": "2026-04-26",
       "state": "active",
       "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Methodology v1.0 and integrity statement both versioned. METHODOLOGY_VERSION wired into rate-letter and certified-payroll write paths so reproducibility flips PARTIAL → PASS at write time."
+    },
+    {
+      "slug": "idealift",
+      "name": "IdeaLift",
+      "description": "Decision intelligence. Capture product decisions from Slack, Teams, and Discord. Prevent decay. Tell the storyline behind why decisions were made.",
+      "homepageUrl": "https://idealift.app",
+      "integrityMdUrl": "https://idealift.app/integrity",
+      "tier": "bronze",
+      "license": "closed-source",
+      "category": "AI for productivity & decision support",
+      "operator": {
+        "name": "Startvest LLC",
+        "isDirectoryOperator": true,
+        "url": "https://startvest.ai"
+      },
+      "firstListedDate": "2026-04-26",
+      "lastRescannedDate": "2026-04-26",
+      "state": "active",
+      "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Bronze-only by design: IdeaLift is a non-compliance product and its INTEGRITY.md classifies 'Public methodology' as N/A. Authoring a faux methodology page just to clear Silver would contradict the published statement and fail Veto 6."
     }
   ]
 }
