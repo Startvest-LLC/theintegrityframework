@@ -1,8 +1,10 @@
-# @startvest/integrity-cli
+# integrity-framework
+
+The CLI for the [Integrity Framework](https://theintegrityframework.org/).
 
 Two surfaces:
 
-1. Run the [Startvest Integrity Framework](https://theintegrityframework.org/framework) v1.0 assertion suite against any repo. Deterministic runner, no LLM, no network.
+1. Run the Integrity Framework v1.0 assertion suite against any repo. Deterministic runner, no LLM, no network.
 2. Browse and submit listings to the [Integrity Framework Directory](https://theintegrityframework.org/).
 
 This package lives in the directory's repo so the CLI's listing-validation schema stays in lockstep with the directory's zod schema.
@@ -10,13 +12,13 @@ This package lives in the directory's repo so the CLI's listing-validation schem
 ## Install
 
 ```bash
-npx @startvest/integrity-cli check ./your-repo
+npx integrity-framework check ./your-repo
 ```
 
 Or globally:
 
 ```bash
-npm install -g @startvest/integrity-cli
+npm install -g integrity-framework
 integrity check ./your-repo
 ```
 

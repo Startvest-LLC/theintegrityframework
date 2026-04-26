@@ -1,4 +1,4 @@
-name: Publish @startvest/integrity-cli
+name: Publish integrity-framework (npm)
 
 on:
   push:
