@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/changelog`, lastModified, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/removed`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/submit`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/submit/form`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   const listingRoutes: MetadataRoute.Sitemap = getActiveListings().map((l) => ({

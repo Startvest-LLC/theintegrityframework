@@ -17,6 +17,16 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.1.6',
+    date: '2026-04-26',
+    changes: [
+      'Hosted submission form: /submit/form is a real form with client-side validation matching the listing schema. Submissions create a tracking issue on the directory\'s public repo via /api/submit. Gracefully falls back to "use the email path" if the GitHub token is not configured on the deploy.',
+      'Honeypot field on the form rejects bot submissions silently (no signal to the bot that the field is checked).',
+      '/submit page reordered: form is Path 1, email is Path 2, GitHub PR is Path 3.',
+      'Sitemap includes /submit/form.',
+    ],
+  },
+  {
     version: '0.1.5',
     date: '2026-04-26',
     changes: [

@@ -80,7 +80,20 @@ export default function SubmitPage() {
       </section>
 
       <section className="mt-14 max-w-3xl">
-        <h2>Path 1: email submission</h2>
+        <h2>Path 1: hosted form (recommended)</h2>
+        <p className="mt-3 text-surface-700">
+          Fill in the listing fields at{' '}
+          <Link href="/submit/form" className="font-medium text-brand-700">/submit/form</Link>.
+          Submission becomes a tracking issue on the directory&apos;s public repo. The reviewer
+          responds on the issue thread within the SLA window.
+        </p>
+        <p className="mt-3 text-surface-700">
+          Prefer email or GitHub PR? Both paths still work — see below.
+        </p>
+      </section>
+
+      <section className="mt-14 max-w-3xl">
+        <h2>Path 2: email submission</h2>
         <p className="mt-3 text-surface-700">
           Email <a href={`mailto:${site.contactEmail}?subject=Directory submission`}>{site.contactEmail}</a> with
           a JSON block following the listing schema below. Include any context you want considered during
@@ -118,17 +131,15 @@ export default function SubmitPage() {
       </section>
 
       <section className="mt-14 max-w-3xl">
-        <h2>Path 2: GitHub pull request</h2>
+        <h2>Path 3: GitHub pull request</h2>
         <p className="mt-3 text-surface-700">
-          Once the directory&apos;s repo is published, technical founders can submit by opening a pull
-          request that adds an entry to{' '}
-          <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">data/listings.json</code>. Same
-          schema as the email path. The PR template will list the verification artifacts the reviewer
-          needs.
-        </p>
-        <p className="mt-3 text-sm text-surface-500">
-          The repo URL will be linked here once the directory is open-sourced. Until then, use the email
-          path.
+          Technical founders can submit by opening a pull request that adds an entry to{' '}
+          <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">data/listings.json</code> on the
+          directory&apos;s public repo at{' '}
+          <a href="https://github.com/Startvest-LLC/theintegrityframework">
+            github.com/Startvest-LLC/theintegrityframework
+          </a>
+          . Same schema as the form and email paths. The PR is the audit trail.
         </p>
       </section>
 
