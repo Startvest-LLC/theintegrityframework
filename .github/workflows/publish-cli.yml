@@ -1,0 +1,58 @@
+name: Publish @startvest/integrity-cli
+
+on:
+  push:
+    tags:
+      - 'cli-v*'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run npm publish with --dry-run only'
+        type: boolean
+        default: false
+
+concurrency:
+  group: publish-cli
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # required for npm Trusted Publishing OIDC token
+      contents: read
+    defaults:
+      run:
+        working-directory: cli
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install (zero deps; this is a sanity check)
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Test
+        run: npm test
+
+      - name: Sanity-check version matches tag
+        if: github.event_name == 'push'
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          TAG_VERSION="${GITHUB_REF_NAME#cli-v}"
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "tag $GITHUB_REF_NAME does not match package.json version $PKG_VERSION"
+            exit 1
+          fi
+          echo "tag and package.json agree on $PKG_VERSION"
+
+      - name: Publish (dry run)
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run == true
+        run: npm publish --provenance --access public --dry-run
+
+      - name: Publish
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == false)
+        run: npm publish --provenance --access public

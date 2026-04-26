@@ -1,0 +1,35 @@
+{
+  "name": "@startvest/integrity-cli",
+  "version": "1.2.0",
+  "description": "Run the Startvest Integrity Framework v1.0 assertion suite against any repo, and browse / submit listings to the Integrity Framework Directory.",
+  "type": "module",
+  "bin": {
+    "integrity": "./bin/integrity.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "manifests/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/runner.test.mjs"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://theintegrityframework.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Startvest-LLC/theintegrityframework.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/Startvest-LLC/theintegrityframework/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

@@ -1,5 +1,6 @@
 .git
 .github
+cli
 node_modules
 .next/cache
 .next/dev
