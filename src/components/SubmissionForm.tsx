@@ -161,7 +161,7 @@ export function SubmissionForm() {
       {result.kind === 'error' && (
         <div role="alert" className="rounded-lg border border-bronze-300 bg-bronze-50 p-4 text-sm text-bronze-900">
           <strong>Submission failed.</strong> {result.message}
-          {result.detail && (
+          {result.detail != null && (
             <pre className="mt-2 overflow-x-auto text-xs">
               {typeof result.detail === 'string' ? result.detail : JSON.stringify(result.detail, null, 2)}
             </pre>
