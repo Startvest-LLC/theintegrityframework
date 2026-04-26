@@ -89,6 +89,17 @@ export default function FrameworkPage() {
       </section>
 
       <section className="mt-12 max-w-3xl">
+        <h2>Why does the framework look like this?</h2>
+        <p className="mt-3 text-surface-700">
+          The reasoning behind v1.0 — the five failure modes it&apos;s reverse-engineered from,
+          why three operational layers, why these specific six pre-build vetoes, and why the whole
+          thing is published openly — lives at{' '}
+          <Link href="/framework/why" className="text-brand-700">/framework/why</Link>. Read that
+          if you&apos;re considering forking the framework or evaluating it for your segment.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl">
         <h2>Source</h2>
         <p className="mt-3 text-surface-700">
           The directory&apos;s source, the listing schema, the integrity-cli, and the deploy

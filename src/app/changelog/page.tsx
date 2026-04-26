@@ -17,6 +17,14 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.1.7',
+    date: '2026-04-26',
+    changes: [
+      '/framework/why: longer-form framework reasoning piece. Explains the five failure modes the framework is reverse-engineered from, why three operational layers, why these specific six pre-build vetoes, why CC BY 4.0, and how the framework relates to SOC 2 / ISO 27001 / FedRAMP. Versioned v1.0 with changelog. Linked from /framework as the next-step reading for forks and evaluators.',
+      'Sitemap includes /framework/why.',
+    ],
+  },
+  {
     version: '0.1.6',
     date: '2026-04-26',
     changes: [
