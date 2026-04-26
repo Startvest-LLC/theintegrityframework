@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+.next/cache
+.env*
+*.log
+README.md
+INTEGRITY.md
+.vscode
+.idea
