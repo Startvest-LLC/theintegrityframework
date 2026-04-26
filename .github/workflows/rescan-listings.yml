@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 concurrency:
@@ -30,6 +30,27 @@ jobs:
           set -o pipefail
           node .github/scripts/rescan-listings.mjs | tee rescan-stdout.txt
         continue-on-error: true
+
+      - name: Commit history update
+        if: always()
+        run: |
+          if git diff --quiet -- data/rescan-history.json; then
+            echo "No history changes to commit."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/rescan-history.json
+          git commit -m "chore(rescan): record $(date -u +%Y-%m-%d) run results"
+          # Push with rebase to handle racing commits during concurrent edits
+          for i in 1 2 3; do
+            if git push origin HEAD:master; then
+              exit 0
+            fi
+            git pull --rebase origin master
+          done
+          echo "Failed to push rescan history after 3 attempts."
+          exit 1
 
       - name: Publish report to job summary
         if: always()

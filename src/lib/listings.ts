@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import listingsJson from '../../data/listings.json';
+import rescanHistoryJson from '../../data/rescan-history.json';
 
 export const TIERS = ['bronze', 'silver'] as const;
 export const LICENSE_MODELS = ['open-source', 'closed-source', 'mixed'] as const;
@@ -127,4 +128,37 @@ export function getDirectoryMeta() {
     activeCount: all.listings.filter((l) => l.state !== 'delisted').length,
     delistedCount: all.listings.filter((l) => l.state === 'delisted').length,
   };
+}
+
+// --- rescan history -------------------------------------------------------
+
+export type RescanEntry = {
+  date: string;
+  passed: boolean;
+  issues: string[];
+};
+
+const rescanEntrySchema = z.object({
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  passed: z.boolean(),
+  issues: z.array(z.string()),
+});
+
+const rescanHistoryFileSchema = z.object({
+  version: z.string(),
+  lastUpdated: z.string(),
+  history: z.record(z.string(), z.array(rescanEntrySchema)),
+});
+
+let cachedRescan: ReturnType<typeof rescanHistoryFileSchema.parse> | undefined;
+
+function loadRescanHistory() {
+  if (cachedRescan) return cachedRescan;
+  cachedRescan = rescanHistoryFileSchema.parse(rescanHistoryJson);
+  return cachedRescan;
+}
+
+export function getRescanHistory(slug: string): RescanEntry[] {
+  const all = loadRescanHistory();
+  return [...(all.history[slug] ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 }

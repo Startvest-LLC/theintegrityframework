@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ListingCard } from '@/components/ListingCard';
+import { ListingsFilter } from '@/components/ListingsFilter';
 import { getActiveListings, getDirectoryMeta } from '@/lib/listings';
 
 export const metadata: Metadata = {
@@ -37,11 +37,7 @@ export default function ListingsPage() {
           {listings.length === 0 ? (
             <p className="text-surface-600">No listings yet. The first community submissions are in review.</p>
           ) : (
-            <div className="grid gap-5 md:grid-cols-2">
-              {listings.map((l) => (
-                <ListingCard key={l.slug} listing={l} />
-              ))}
-            </div>
+            <ListingsFilter listings={listings} />
           )}
         </div>
       </section>

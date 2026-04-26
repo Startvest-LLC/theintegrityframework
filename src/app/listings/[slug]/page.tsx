@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { TierBadge } from '@/components/TierBadge';
-import { getAllListingSlugs, getListingBySlug } from '@/lib/listings';
+import { getAllListingSlugs, getListingBySlug, getRescanHistory } from '@/lib/listings';
 
 export function generateStaticParams() {
   return getAllListingSlugs().map((slug) => ({ slug }));
@@ -32,6 +32,7 @@ export default async function ListingDetailPage({
   const listing = getListingBySlug(slug);
   if (!listing) notFound();
 
+  const rescanHistory = getRescanHistory(slug);
   const credentialLink =
     listing.silverCredential?.kind === 'methodology-page'
       ? listing.silverCredential.url
@@ -137,6 +138,47 @@ export default async function ListingDetailPage({
                 <p className="mt-3 text-surface-700">{listing.rationale}</p>
               </div>
             )}
+
+            <div>
+              <h2 className="text-lg">Re-scan history</h2>
+              {rescanHistory.length === 0 ? (
+                <p className="mt-3 text-sm text-surface-500">
+                  No re-scans yet. The directory re-scans listings weekly. The first run will land
+                  on the next scheduled cadence.
+                </p>
+              ) : (
+                <ul className="mt-3 divide-y divide-surface-200 text-sm">
+                  {rescanHistory.map((entry, i) => (
+                    <li key={`${entry.date}-${i}`} className="py-2 flex items-start gap-3">
+                      <span
+                        className={`shrink-0 inline-flex items-center justify-center px-2 py-0.5 rounded text-xs font-medium ${
+                          entry.passed
+                            ? 'bg-brand-50 text-brand-700 ring-1 ring-inset ring-brand-200'
+                            : 'bg-bronze-50 text-bronze-700 ring-1 ring-inset ring-bronze-200'
+                        }`}
+                      >
+                        {entry.passed ? 'PASS' : 'FAIL'}
+                      </span>
+                      <span className="font-mono text-surface-700">{entry.date}</span>
+                      {entry.issues.length > 0 && (
+                        <ul className="text-surface-600 list-disc list-inside ml-2">
+                          {entry.issues.map((issue, j) => (
+                            <li key={j}>{issue}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <p className="mt-3 text-xs text-surface-500">
+                Re-scans run weekly via{' '}
+                <a href="https://github.com/Startvest-LLC/theintegrityframework/actions/workflows/rescan-listings.yml">
+                  the public workflow
+                </a>
+                . Failed scans open an issue on the directory&apos;s repo.
+              </p>
+            </div>
           </div>
 
           <aside className="space-y-6 text-sm">

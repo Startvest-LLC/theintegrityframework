@@ -17,6 +17,16 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.1.5',
+    date: '2026-04-26',
+    changes: [
+      'Filter + sort on /listings: client-side controls for tier (Bronze, Silver, All), category, and sort key (tier, name, last re-scanned, first listed). Fast even at small N; will hold up well past 30 listings without server changes.',
+      '/framework/v1: permanent permalink stub on the directory site that 307s to the canonical spec at claritylift.ai/framework/v1. If the canonical home ever moves, citations to theintegrityframework.org/framework/v1 keep working — flip the redirect target once.',
+      'Per-listing re-scan history: data/rescan-history.json schema added; the weekly rescan workflow now appends a pass/fail entry per listing per run and commits it back to master. /listings/<slug> renders the timeline.',
+      'Rescan workflow has contents:write permission and a self-commit step (rebase-on-conflict, github-actions[bot] identity).',
+    ],
+  },
+  {
     version: '0.1.4',
     date: '2026-04-26',
     changes: [

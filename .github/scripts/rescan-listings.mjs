@@ -130,6 +130,30 @@ async function main() {
 
   await writeFile(resolve('rescan-report.json'), JSON.stringify(summary, null, 2));
 
+  // Append run results to data/rescan-history.json so per-listing UI can render
+  // the timeline. One entry per non-skipped listing per run.
+  const historyPath = resolve('data/rescan-history.json');
+  const today = summary.runDate.slice(0, 10);
+  let history;
+  try {
+    history = JSON.parse(await readFile(historyPath, 'utf8'));
+  } catch {
+    history = { version: '0.1', lastUpdated: today, history: {} };
+  }
+  if (!history.history) history.history = {};
+
+  for (const r of results) {
+    if (r.skipped) continue;
+    if (!history.history[r.slug]) history.history[r.slug] = [];
+    history.history[r.slug].push({
+      date: today,
+      passed: r.passed,
+      issues: r.issues,
+    });
+  }
+  history.lastUpdated = today;
+  await writeFile(historyPath, `${JSON.stringify(history, null, 2)}\n`);
+
   // Human-readable report
   const lines = [];
   lines.push(`# Re-scan report`);
