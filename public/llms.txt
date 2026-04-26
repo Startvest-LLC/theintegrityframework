@@ -1,0 +1,31 @@
+# The Integrity Framework Directory
+
+> A public directory of products evaluated against the Integrity Framework v1.0. Buyers use it to evaluate sub-enterprise AI tools where SOC 2 does not apply. Founders use it to demonstrate framework conformance for their segment.
+
+Operated by Startvest LLC. Listings are reviewed manually before publishing. Two tiers: Bronze (public INTEGRITY.md with all six Layer 1 vetoes mapped) and Silver (Bronze plus either an integrity-cli green run against the public repo, or a public methodology page with versioned changelog).
+
+## Listings
+
+- [Listings index](https://theintegrityframework.org/listings)
+- [Listings JSON API](https://theintegrityframework.org/api/listings.json)
+
+## Framework
+
+- [The Integrity Framework v1.0 (canonical)](https://claritylift.ai/framework/v1)
+- [Directory methodology](https://theintegrityframework.org/methodology)
+- [Directory's own integrity statement](https://github.com/Startvest-LLC/theintegrityframework/blob/master/INTEGRITY.md)
+
+## Submit
+
+- [How to submit](https://theintegrityframework.org/submit)
+- Email path: integrity@startvest.ai
+- GitHub PR path: https://github.com/Startvest-LLC/theintegrityframework
+
+## CLI
+
+The framework's CLI lives in this site's repo at `cli/`. Install:
+
+- Linux / macOS: `curl -fsSL https://theintegrityframework.org/install.sh | sh`
+- Windows: `irm https://theintegrityframework.org/install.ps1 | iex`
+
+Subcommands: `integrity check <repo>` (run framework assertion suite), `integrity directory list / show / validate / submit`.
