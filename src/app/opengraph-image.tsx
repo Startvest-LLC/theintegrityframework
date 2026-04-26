@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export const alt = 'The Integrity Framework Directory — a trust signal for sub-enterprise AI tools.';
@@ -74,7 +73,7 @@ export default function OG() {
             <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span
                 style={{
-                  display: 'inline-block',
+                  display: 'flex',
                   width: 10,
                   height: 10,
                   borderRadius: 999,
@@ -86,7 +85,7 @@ export default function OG() {
             <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span
                 style={{
-                  display: 'inline-block',
+                  display: 'flex',
                   width: 10,
                   height: 10,
                   borderRadius: 999,
