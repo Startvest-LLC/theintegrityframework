@@ -1,17 +1,12 @@
 {
   "name": "integrity-framework",
   "version": "1.2.0",
-  "description": "Run the Integrity Framework v1.0 assertion suite against any repo, and browse / submit listings to the Integrity Framework Directory.",
+  "private": true,
+  "description": "CLI for the Integrity Framework. Run the v1.0 assertion suite, and browse / submit listings to the Integrity Framework Directory.",
   "type": "module",
   "bin": {
     "integrity": "./bin/integrity.mjs"
   },
-  "files": [
-    "bin/",
-    "src/",
-    "manifests/",
-    "README.md"
-  ],
   "engines": {
     "node": ">=20"
   },
@@ -27,8 +22,5 @@
   },
   "bugs": {
     "url": "https://github.com/Startvest-LLC/theintegrityframework/issues"
-  },
-  "publishConfig": {
-    "provenance": true
   }
 }

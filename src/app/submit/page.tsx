@@ -65,12 +65,13 @@ export default function SubmitPage() {
             any one is an automatic Bronze rejection.
           </li>
           <li>
-            For Silver: either{' '}
-            <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">@startvest/integrity-cli</code> runs
-            green against your public repo, or your product has a public methodology page with a{' '}
+            For Silver: either the framework{' '}
+            <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">integrity</code> CLI runs green
+            against your public repo, or your product has a public methodology page with a{' '}
             <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">Version</code> heading and a{' '}
             <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">Changelog</code> heading. Pick the
-            credential that fits your product shape. You do not need both.
+            credential that fits your product shape. You do not need both. The CLI lives in this
+            directory&apos;s public repo at <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">cli/</code>; clone and run.
           </li>
         </ol>
         <p className="mt-4 text-sm text-surface-500">
