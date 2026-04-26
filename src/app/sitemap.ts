@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${base}/listings`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/framework`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/what-is-the-integrity-framework`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/methodology`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/changelog`, lastModified, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/removed`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
