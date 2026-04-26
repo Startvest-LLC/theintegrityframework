@@ -47,6 +47,29 @@
       "lastRescannedDate": "2026-04-26",
       "state": "active",
       "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Methodology v1.0 and integrity statement both versioned with changelog. Conformance-claim guard (CRIT-SV-CONFORMANCE-CLAIM-GUARD) blocks 'full' publishes when critical axe findings remain open."
+    },
+    {
+      "slug": "fieldledger",
+      "name": "FieldLedger",
+      "description": "DCAA-compliant operations and compliance tooling for federal contractors and construction businesses. WH-347 generation, FAR 31.2 indirect rates, audit log.",
+      "homepageUrl": "https://fieldledger.us",
+      "integrityMdUrl": "https://fieldledger.us/integrity",
+      "silverCredential": {
+        "kind": "methodology-page",
+        "url": "https://fieldledger.us/methodology"
+      },
+      "tier": "silver",
+      "license": "closed-source",
+      "category": "AI for compliance & trust",
+      "operator": {
+        "name": "Startvest LLC",
+        "isDirectoryOperator": true,
+        "url": "https://startvest.ai"
+      },
+      "firstListedDate": "2026-04-26",
+      "lastRescannedDate": "2026-04-26",
+      "state": "active",
+      "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Methodology v1.0 and integrity statement both versioned. METHODOLOGY_VERSION wired into rate-letter and certified-payroll write paths so reproducibility flips PARTIAL → PASS at write time."
     }
   ]
 }
