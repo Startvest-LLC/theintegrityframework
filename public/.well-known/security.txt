@@ -1,0 +1,5 @@
+Contact: mailto:integrity@startvest.ai
+Expires: 2027-04-25T00:00:00Z
+Preferred-Languages: en
+Canonical: https://theintegrityframework.org/.well-known/security.txt
+Policy: https://theintegrityframework.org/methodology

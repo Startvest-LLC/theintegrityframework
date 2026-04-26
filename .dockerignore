@@ -2,6 +2,8 @@
 .github
 node_modules
 .next/cache
+.next/dev
+.next/types
 .env*
 *.log
 README.md
