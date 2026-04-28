@@ -1,0 +1,77 @@
+# The Integrity Framework. Full Reference
+
+> A public directory of products evaluated against the Integrity Framework v1.0. Trust signal for sub-enterprise AI tools where SOC 2 does not apply.
+
+## What this is
+A public registry of products that have published an INTEGRITY.md and self-mapped to the Integrity Framework v1.0. Listings are reviewed manually before publishing. Two badge tiers (Bronze, Silver). Free. No paid placement. Operated by StartVest LLC.
+
+## Who it's for
+- Founders of sub-enterprise AI and automation products needing a credible trust signal
+- Buyers (procurement, IT, security) evaluating AI tools below SOC 2 enterprise scope
+- Engineers verifying a vendor's stated assertions against their public repo
+- Researchers tracking the AI trust-and-safety landscape
+
+## Who it's not for
+- Enterprise vendors already covered by SOC 2 Type II, ISO 27001, or equivalent
+- Closed-source products unwilling to publish an INTEGRITY.md
+- Buyers requiring contractual indemnification (the directory is informational)
+
+## Operator
+StartVest LLC. SDVOSB/VOSB certified. UEI: FJ4ZFNG4XS54. CAGE: 18X56. Founder: Tom Pinder. Hampstead, NC.
+
+## The framework, in one paragraph
+The Integrity Framework v1.0 organizes product trust assertions into layers. Layer 1 is the six "vetoes": absolute non-starters that disqualify a product from any listing (e.g. covert data sale, training on customer data without disclosure). Above Layer 1 are positive assertions a product can make about its handling of inputs, outputs, model selection, and disclosures. The canonical framework is hosted at https://claritylift.ai/framework/v1.
+
+## Listing tiers
+- Bronze. Public INTEGRITY.md in the product's repo or site. All six Layer 1 vetoes mapped to a "yes/no with evidence" position. Free. Reviewed manually.
+- Silver. Bronze plus one of: (a) integrity-cli green run against the product's public repo, or (b) a public methodology page with a versioned changelog. Free. Reviewed manually.
+- Gold (deferred). Reserved for a future tier requiring third-party audit. Not currently issued.
+
+There is no paid placement. There is no "fast track." All listings go through the same manual review.
+
+## Submission flow
+1. Author an INTEGRITY.md mapping all six Layer 1 vetoes. Template at /methodology.
+2. Submit via GitHub PR to https://github.com/Startvest-LLC/theintegrityframework or email integrity@startvest.ai.
+3. Manual review (typical turnaround under 5 business days).
+4. Listing published at /listings/<your-product>. Badge available via shield URL.
+
+## CLI
+The integrity-cli is open source, in this site's repo under /cli.
+
+- Linux and macOS: curl -fsSL https://theintegrityframework.org/install.sh | sh
+- Windows: irm https://theintegrityframework.org/install.ps1 | iex
+
+Subcommands:
+- integrity check <repo>. Runs the framework assertion suite against a local or remote repo.
+- integrity directory list. Lists all published Bronze and Silver listings.
+- integrity directory show <slug>. Pulls a single listing.
+- integrity directory validate. Validates a draft INTEGRITY.md.
+- integrity directory submit. Opens a PR against the directory.
+
+## Listings API
+- Endpoint: https://theintegrityframework.org/api/listings.json
+- Format: JSON array. One object per published listing. Includes slug, name, tier, badges, repo URL, last-reviewed date.
+- Auth: none (public).
+- Rate limit: 60 requests per minute per IP.
+
+## FAQ
+**Is this an audit?**
+No. Listings are self-attestations reviewed for plausibility against the public repo. The directory does not perform third-party security audits.
+
+**Can we pay to get listed faster?**
+No. Manual review only. Same queue for everyone.
+
+**Why not just use SOC 2?**
+SOC 2 fits enterprise vendors with audit budgets. The Integrity Framework targets the much larger population of sub-enterprise AI tools that buyers still need to evaluate. The two are not exclusive. A vendor with SOC 2 can still publish an INTEGRITY.md.
+
+**Who decides what makes Layer 1?**
+StartVest LLC owns the framework version. Changes go through a public RFC at /methodology. Versioned. Backwards-compatible breaks are flagged.
+
+**Can a listing be revoked?**
+Yes. If the public assertions in an INTEGRITY.md are contradicted by behavior or repo state, the listing is revoked and a revocation note is posted.
+
+## Trademarks and disambiguation
+The Integrity Framework is a published standard authored by StartVest LLC. Bronze and Silver badges are issued only after manual review by StartVest staff. Not affiliated with any third-party "integrity" or "trust" branded products.
+
+## Last updated
+2026-04-28

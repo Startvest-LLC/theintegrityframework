@@ -1,31 +1,52 @@
-# The Integrity Framework Directory
+# The Integrity Framework
 
-> A public directory of products evaluated against the Integrity Framework v1.0. Buyers use it to evaluate sub-enterprise AI tools where SOC 2 does not apply. Founders use it to demonstrate framework conformance for their segment.
+> A public directory of products evaluated against the Integrity Framework v1.0. Trust signal for sub-enterprise AI tools where SOC 2 does not apply.
 
-Operated by Startvest LLC. Listings are reviewed manually before publishing. Two tiers: Bronze (public INTEGRITY.md with all six Layer 1 vetoes mapped) and Silver (Bronze plus either an integrity-cli green run against the public repo, or a public methodology page with versioned changelog).
+## What this is
+The Integrity Framework Directory is a free public registry. Products self-map to the Integrity Framework v1.0 (a published trust-and-safety standard for AI and automation tools), submit an INTEGRITY.md, and receive a Bronze or Silver listing after manual review. Buyers use the directory to evaluate AI tools below SOC 2 enterprise scope. Founders use it to demonstrate framework conformance.
 
-## Listings
+## Who it's for
+- Founders of sub-enterprise AI and automation products who need a credible trust signal
+- Buyers (procurement, IT, security) evaluating AI tools below SOC 2 enterprise scope
+- Engineers who want to verify a vendor's stated assertions against their public repo
+- Researchers tracking the AI trust-and-safety landscape
 
-- [Listings index](https://theintegrityframework.org/listings)
-- [Listings JSON API](https://theintegrityframework.org/api/listings.json)
+## Who it's not for
+- Enterprise vendors already covered by SOC 2 Type II, ISO 27001, or equivalent
+- Closed-source products unwilling to publish an INTEGRITY.md
+- Buyers who require contractual indemnification (the directory is informational, not a warranty)
 
-## Framework
+## Pricing
+Free. Listing submission is free. There is no paid placement. Two badge tiers based on what the listing demonstrates:
 
-- [The Integrity Framework v1.0 (canonical)](https://claritylift.ai/framework/v1)
-- [Directory methodology](https://theintegrityframework.org/methodology)
-- [Directory's own integrity statement](https://github.com/Startvest-LLC/theintegrityframework/blob/master/INTEGRITY.md)
+- Bronze: free. Public INTEGRITY.md with all six Layer 1 vetoes mapped.
+- Silver: free. Bronze plus either an integrity-cli green run against the public repo, or a public methodology page with versioned changelog.
+- Gold: deferred. Reserved for a future tier with third-party audit requirements.
 
-## Submit
+## Integrations
+- CLI: integrity-cli, lives in this site's repo at /cli
+- Listings JSON API: https://theintegrityframework.org/api/listings.json
+- Submit: GitHub PR or email
 
-- [How to submit](https://theintegrityframework.org/submit)
-- Email path: integrity@startvest.ai
-- GitHub PR path: https://github.com/Startvest-LLC/theintegrityframework
+## Operator
+StartVest LLC. SDVOSB/VOSB certified. UEI: FJ4ZFNG4XS54. CAGE: 18X56. Founder: Tom Pinder. Hampstead, NC.
+
+## Key resources
+- Full reference: /llms-full.txt
+- Listings index: /listings
+- Listings JSON API: /api/listings.json
+- The Integrity Framework v1 (canonical): https://claritylift.ai/framework/v1
+- Directory methodology: /methodology
+- Submit a listing: /submit
+- Directory's own INTEGRITY.md: https://github.com/Startvest-LLC/theintegrityframework/blob/master/INTEGRITY.md
 
 ## CLI
+- Linux and macOS: curl -fsSL https://theintegrityframework.org/install.sh | sh
+- Windows: irm https://theintegrityframework.org/install.ps1 | iex
+- Subcommands: integrity check <repo>, integrity directory list, show, validate, submit
 
-The framework's CLI lives in this site's repo at `cli/`. Install:
+## Trademarks
+The Integrity Framework is a published standard authored by StartVest LLC. Bronze and Silver badges are issued only after manual review.
 
-- Linux / macOS: `curl -fsSL https://theintegrityframework.org/install.sh | sh`
-- Windows: `irm https://theintegrityframework.org/install.ps1 | iex`
-
-Subcommands: `integrity check <repo>` (run framework assertion suite), `integrity directory list / show / validate / submit`.
+## Last updated
+2026-04-28
