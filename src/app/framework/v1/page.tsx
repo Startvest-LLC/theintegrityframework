@@ -288,12 +288,27 @@ export default function FrameworkV1Page() {
               </span>{' '}
               <b className="text-surface-900">No pre-population of attestation outputs.</b>{' '}
               Auditor conclusions, test results, and compliance verdicts cannot be populated before
-              the underlying customer evidence has been submitted. Surfaced by the Delve case
-              study; landing as candidate CI rule{' '}
+              the underlying customer evidence has been submitted. Surfaced by the{' '}
+              <Link
+                href="/framework/cases/delve"
+                className="text-brand-700 hover:text-brand-800 underline"
+              >
+                Delve case study
+              </Link>
+              ; landing as candidate CI rule{' '}
               <code className="text-xs bg-surface-100 px-1.5 py-0.5 rounded">
                 CRIT-SV-NO-PRE-POPULATED-ATTESTATION
               </code>{' '}
-              in v1.1.
+              in v1.1. The integrity-cli base manifest already implements this as a content-based
+              co-occurrence rule (revised in v1.4.0); the calibration against a real codebase
+              happened during the{' '}
+              <Link
+                href="/framework/cases/fieldledger"
+                className="text-brand-700 hover:text-brand-800 underline"
+              >
+                FieldLedger audit
+              </Link>
+              .
             </li>
           </ol>
           <p className="mt-4 text-surface-600">
@@ -363,8 +378,14 @@ export default function FrameworkV1Page() {
               <b className="text-surface-900">Sub-processor auditor identity verification.</b>{' '}
               When a compliance product routes evidence through a third-party auditor, the
               auditor&apos;s identity and accreditation are verified at sub-processor onboarding
-              and re-verified annually. Trust-but-verify on the chain. Surfaced by the Delve case
-              study.
+              and re-verified annually. Trust-but-verify on the chain. Surfaced by the{' '}
+              <Link
+                href="/framework/cases/delve"
+                className="text-brand-700 hover:text-brand-800 underline"
+              >
+                Delve case study
+              </Link>
+              .
             </li>
           </ol>
         </Section>

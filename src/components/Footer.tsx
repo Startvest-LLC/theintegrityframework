@@ -25,6 +25,7 @@ export function Footer() {
             <li><Link href="/framework" className="text-surface-700 no-underline hover:text-brand-700">The Integrity Framework</Link></li>
             <li><Link href="/framework/v1" className="text-surface-700 no-underline hover:text-brand-700">Canonical v1 spec</Link></li>
             <li><Link href="/framework/why" className="text-surface-700 no-underline hover:text-brand-700">Why the framework looks like this</Link></li>
+            <li><Link href="/framework/cases" className="text-surface-700 no-underline hover:text-brand-700">Case studies</Link></li>
             <li><Link href="/changelog" className="text-surface-700 no-underline hover:text-brand-700">Changelog</Link></li>
             <li><a href="https://github.com/Startvest-LLC/theintegrityframework" className="text-surface-700 no-underline hover:text-brand-700">Source on GitHub</a></li>
           </ul>
