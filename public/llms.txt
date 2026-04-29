@@ -24,7 +24,7 @@ Free. Listing submission is free. There is no paid placement. Two badge tiers ba
 - Gold: deferred. Reserved for a future tier with third-party audit requirements.
 
 ## Integrations
-- CLI: integrity-cli, lives in this site's repo at /cli
+- CLI: @startvest/integrity-cli, canonical at https://github.com/Startvest-LLC/startvest-integrity-cli
 - Listings JSON API: https://theintegrityframework.org/api/listings.json
 - Submit: GitHub PR or email
 
@@ -41,8 +41,7 @@ StartVest LLC. SDVOSB/VOSB certified. UEI: FJ4ZFNG4XS54. CAGE: 18X56. Founder: T
 - Directory's own INTEGRITY.md: https://github.com/Startvest-LLC/theintegrityframework/blob/master/INTEGRITY.md
 
 ## CLI
-- Linux and macOS: curl -fsSL https://theintegrityframework.org/install.sh | sh
-- Windows: irm https://theintegrityframework.org/install.ps1 | iex
+- Canonical repo: https://github.com/Startvest-LLC/startvest-integrity-cli (clone + run; pure ESM, zero runtime deps, Node 20+)
 - Subcommands: integrity check <repo>, integrity directory list, show, validate, submit
 
 ## Trademarks

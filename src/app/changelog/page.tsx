@@ -17,6 +17,16 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.2.1',
+    date: '2026-04-29',
+    changes: [
+      'cli/ directory removed from this repo. The canonical CLI is @startvest/integrity-cli at https://github.com/Startvest-LLC/startvest-integrity-cli — the version actually used by every Startvest portfolio audit. This repo had been carrying a fork that was 5 manifest revisions behind upstream (v1.1.1 vs v1.6.0) and missing the co-occurrence + integrity-md-claims check kinds; keeping it created the exact silent-loosening drift vector that the framework prohibits at the product level. Single source of truth wins.',
+      'public/install.sh and public/install.ps1 removed (they cloned this repo\'s now-deleted cli/). The canonical install path is git clone of startvest-integrity-cli.',
+      'Site references updated: /framework/v1 + /framework/cases/fieldledger flip the integrity-cli link from github.com/Startvest-LLC/theintegrityframework/tree/master/cli to github.com/Startvest-LLC/startvest-integrity-cli. llms.txt + llms-full.txt CLI sections rewritten.',
+      'Phase 1 of an enforcement-audit pass driven by the FieldLedger / ClarityLift / IdeaLift portfolio audits. Phase 2 work (cross-repo CI gates + version bumps + naming hygiene) ships as separate PRs in each product repo.',
+    ],
+  },
+  {
     version: '0.2.0',
     date: '2026-04-29',
     changes: [

@@ -393,7 +393,7 @@ node bin/integrity.mjs check ../FieldLedger --format=json \\
                 </li>
                 <li>
                   <a
-                    href="https://github.com/Startvest-LLC/theintegrityframework/tree/master/cli"
+                    href="https://github.com/Startvest-LLC/startvest-integrity-cli"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-700 hover:text-brand-800 underline"
