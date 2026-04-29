@@ -36,10 +36,13 @@ There is no paid placement. There is no "fast track." All listings go through th
 4. Listing published at /listings/<your-product>. Badge available via shield URL.
 
 ## CLI
-The integrity-cli is open source, in this site's repo under /cli.
+The integrity-cli is open source under Apache-2.0. Canonical repo: https://github.com/Startvest-LLC/startvest-integrity-cli (package: @startvest/integrity-cli). Pure ESM, zero runtime dependencies, Node 20+.
 
-- Linux and macOS: curl -fsSL https://theintegrityframework.org/install.sh | sh
-- Windows: irm https://theintegrityframework.org/install.ps1 | iex
+Install via clone:
+
+  git clone https://github.com/Startvest-LLC/startvest-integrity-cli.git
+  cd startvest-integrity-cli
+  node bin/integrity.mjs --version
 
 Subcommands:
 - integrity check <repo>. Runs the framework assertion suite against a local or remote repo.
