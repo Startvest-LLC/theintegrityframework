@@ -17,7 +17,6 @@ export function Footer() {
             <li><Link href="/listings" className="text-surface-700 no-underline hover:text-brand-700">Listings</Link></li>
             <li><Link href="/submit" className="text-surface-700 no-underline hover:text-brand-700">Submit a product</Link></li>
             <li><Link href="/methodology" className="text-surface-700 no-underline hover:text-brand-700">Methodology</Link></li>
-            <li><Link href="/removed" className="text-surface-700 no-underline hover:text-brand-700">Removed listings</Link></li>
           </ul>
         </div>
         <div>

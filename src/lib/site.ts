@@ -7,5 +7,5 @@ export const site = {
   publisher: 'Startvest LLC',
   contactEmail: 'integrity@startvest.ai',
   frameworkVersion: '1.0',
-  directoryVersion: '0.1.8',
+  directoryVersion: '0.1.9',
 } as const;
