@@ -1,0 +1,70 @@
+name: IndexNow Submission
+
+on:
+  workflow_run:
+    workflows: ["Deploy theintegrityframework"]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for edge cache propagation
+        run: sleep 60
+
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          INDEXNOW_KEY: 3bf31306b1bbe89b708961c6482675b0
+          HOST: theintegrityframework.org
+        run: |
+          set -e
+
+          # Fetch sitemap, extract <loc> URLs
+          urls=$(curl -fsSL "https://${HOST}/sitemap.xml" \
+            | grep -oE '<loc>[^<]+</loc>' \
+            | sed 's|<loc>||;s|</loc>||')
+
+          if [ -z "$urls" ]; then
+            echo "::warning::No URLs found in https://${HOST}/sitemap.xml"
+            exit 0
+          fi
+
+          count=$(echo "$urls" | wc -l)
+          echo "Found $count URLs in sitemap"
+
+          # Build JSON payload (IndexNow accepts up to 10,000 URLs per request)
+          urlList=$(echo "$urls" | jq -R -s -c 'split("\n") | map(select(. != ""))')
+
+          payload=$(jq -n \
+            --arg host "${HOST}" \
+            --arg key "${INDEXNOW_KEY}" \
+            --argjson urls "$urlList" \
+            '{
+              host: $host,
+              key: $key,
+              keyLocation: "https://\($host)/\($key).txt",
+              urlList: $urls
+            }')
+
+          # Submit to IndexNow API
+          status=$(curl -sw "%{http_code}" -o /tmp/resp.txt \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$payload")
+
+          echo "IndexNow API response: $status"
+          cat /tmp/resp.txt
+          echo
+
+          if [[ "$status" != "200" && "$status" != "202" ]]; then
+            echo "::error::IndexNow submission failed (HTTP $status)"
+            exit 1
+          fi
+
+          echo "::notice::Submitted $count URLs to IndexNow"
