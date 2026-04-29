@@ -4,6 +4,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { site } from '@/lib/site';
 import './globals.css';
+import StructuredData from '@/components/StructuredData';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+      <head>
+        <StructuredData />
+      </head>
       <body className="antialiased min-h-screen flex flex-col">
         <a href="#main" className="skip-link">Skip to content</a>
         <Nav />
