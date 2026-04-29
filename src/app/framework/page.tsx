@@ -90,6 +90,26 @@ export default function FrameworkPage() {
       </section>
 
       <section className="mt-12 max-w-3xl">
+        <h2>Case studies</h2>
+        <p className="mt-3 text-surface-700">
+          Two cases live at <Link href="/framework/cases">/framework/cases</Link>. The{' '}
+          <Link href="/framework/cases/delve" className="text-brand-700">Delve case</Link>{' '}
+          walks a publicly-reported failure through the framework — teaching material, citing
+          public reporting only. The{' '}
+          <Link href="/framework/cases/fieldledger" className="text-brand-700">
+            FieldLedger audit
+          </Link>{' '}
+          is the first internal portfolio audit; it also documents two false negatives the audit
+          found in the framework&apos;s own rule set, and how they were closed in base manifest
+          v1.3.0 and v1.4.0.
+        </p>
+        <p className="mt-3 text-surface-700">
+          Each subsequent portfolio audit becomes a new case study. ClarityLift is next in the
+          queue.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl">
         <h2>Why does the framework look like this?</h2>
         <p className="mt-3 text-surface-700">
           The reasoning behind v1.0 — the five failure modes it&apos;s reverse-engineered from,

@@ -17,6 +17,19 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.2.0',
+    date: '2026-04-29',
+    changes: [
+      'Case studies surface added at /framework/cases. Two cases live at launch: the Delve case study (first public case under v1.0 — walks publicly-reported allegations against an AI compliance startup through the five failure modes and the six-row vendor scorecard, score 0/6) and the FieldLedger audit case (first internal portfolio audit — 14 PASS / 5 PARTIAL or NEEDS UPDATE / 1 DEFERRED / 0 FAIL across 20 dimensions, plus two false negatives found in the framework\'s own rule set that were revised in base manifest v1.3.0 and v1.4.0).',
+      'Each subsequent portfolio audit (ClarityLift, IdeaLift, ADAComplianceDocs, HirePosture, MA, PRAPI in rough order) becomes a new case study at /framework/cases/<slug>.',
+      '/framework/v1: the two v1.1 candidate items now link to the Delve case study (where they were surfaced) and the FieldLedger case (where the Layer 2 candidate was calibrated and shipped as a co-occurrence rule).',
+      '/framework: overview page surfaces the case studies in a new section.',
+      'Footer: Case studies link added under Framework.',
+      'Sitemap: /framework/cases (0.85), /framework/cases/delve (0.8), /framework/cases/fieldledger (0.8).',
+      'Minor version bump (0.1.9 → 0.2.0) since the case studies surface is a meaningful addition.',
+    ],
+  },
+  {
     version: '0.1.9',
     date: '2026-04-29',
     changes: [
