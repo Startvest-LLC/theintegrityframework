@@ -1,8 +1,15 @@
 {
   "$schema": "../docs/manifest-schema.md",
   "name": "Startvest Integrity Framework — base manifest",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "changelog": [
+    {
+      "version": "1.1.1",
+      "date": "2026-04-28",
+      "changes": [
+        "frameworkUrl flipped from startvest.ai/framework to theintegrityframework.org/framework/v1 — the canonical spec relocated to its own domain. Rule semantics unchanged."
+      ]
+    },
     {
       "version": "1.1.0",
       "date": "2026-04-25",
@@ -19,7 +26,7 @@
   ],
   "description": "Universal assertions every Startvest product must satisfy. Per-product manifests at audits/rules/*.json extend this set with product-specific checks. Rule IDs are stable: a product can re-use the id to specialise the check (e.g. tighten the globs) while preserving framework lineage.",
   "relationshipToOtherStandards": "This framework addresses AI-specific integrity concerns that traditional security audits don't cover (e.g. methodology versioning, AI review gates, evidence chain integrity, failure transparency). It serves a different market segment than SOC 2, ISO 27001, FedRAMP, and similar operational security frameworks. SOC 2 is the right primary trust signal for enterprise SaaS at procurement-checklist scale. This framework is the right primary trust signal for sub-enterprise AI tools where the buyer evaluates a solo founder or small team, and operational security audits don't yet apply. A product may carry both, neither, or one as it grows. The framework is not anti-SOC 2 and not a SOC 2 substitute — it fills the trust-signal gap that exists at the scale SOC 2 doesn't reach.",
-  "frameworkUrl": "https://startvest.ai/framework",
+  "frameworkUrl": "https://theintegrityframework.org/framework/v1",
   "rules": [
     {
       "id": "HIGH-SV-INTEGRITY-MD",

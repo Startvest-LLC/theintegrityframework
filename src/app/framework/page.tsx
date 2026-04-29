@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const CANONICAL_URL = 'https://claritylift.ai/framework';
+const CANONICAL_URL = '/framework/v1';
 const FRAMEWORK_VERSION = '1.0';
-const PERMANENT_V1_URL = 'https://claritylift.ai/framework/v1';
 
 export const metadata: Metadata = {
   title: 'The Integrity Framework',
@@ -32,32 +31,34 @@ export default function FrameworkPage() {
           product portfolio fit.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
+          <Link
             href={CANONICAL_URL}
             className="inline-flex items-center rounded-md bg-brand-700 px-5 py-3 text-sm font-medium text-white no-underline hover:bg-brand-800"
           >
-            Read the canonical spec
-          </a>
-          <a
-            href={PERMANENT_V1_URL}
+            Read the canonical v{FRAMEWORK_VERSION} spec
+          </Link>
+          <Link
+            href="/framework/why"
             className="inline-flex items-center rounded-md border border-surface-300 px-5 py-3 text-sm font-medium text-surface-800 no-underline hover:border-surface-400"
           >
-            Permanent v1 link
-          </a>
+            Why the framework looks like this
+          </Link>
         </div>
       </header>
 
       <section className="mt-16 max-w-3xl">
         <h2>Where the spec lives</h2>
         <p className="mt-3 text-surface-700">
-          The canonical text of the framework is hosted at{' '}
-          <a href={CANONICAL_URL}>{CANONICAL_URL}</a>. It is the source of truth.
+          The canonical v{FRAMEWORK_VERSION} text lives at{' '}
+          <Link href="/framework/v1">/framework/v1</Link>. That is the frozen citation URL — wording
+          stable, future revisions ship under <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">/v2</code>,{' '}
+          <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">/v3</code>, and so on, with v1 left
+          intact for everything operating against it.
         </p>
         <p className="mt-3 text-surface-700">
-          That URL is interim. The spec was first published from a Startvest product domain
-          (claritylift.ai) because the directory you are on now did not yet exist. Future versions
-          may move the canonical home; the v1 spec is permanently mirrored at{' '}
-          <a href={PERMANENT_V1_URL}>{PERMANENT_V1_URL}</a> regardless.
+          v1.0 was first published at <code className="rounded bg-surface-100 px-1 py-0.5 text-sm">claritylift.ai/framework</code>{' '}
+          while this site was being built. The canonical home moved here on 2026-04-28; the prior URL
+          remains valid via redirect, and the v1.0 wording is unchanged.
         </p>
       </section>
 

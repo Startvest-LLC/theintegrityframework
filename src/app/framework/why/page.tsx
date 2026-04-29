@@ -359,15 +359,14 @@ export default function FrameworkWhyPage() {
           <li>
             Synthesizes the failure-mode analysis from{' '}
             <Link href="/framework">/framework</Link> and the published v1 spec at{' '}
-            <a href="https://claritylift.ai/framework/v1">claritylift.ai/framework/v1</a>.
+            <Link href="/framework/v1">/framework/v1</Link>.
           </li>
         </ul>
       </Section>
 
       <p className="mt-16 max-w-3xl text-sm text-surface-500">
         Forking? Pull the framework spec at{' '}
-        <a href="https://claritylift.ai/framework">claritylift.ai/framework</a> and the directory
-        source at{' '}
+        <Link href="/framework/v1">/framework/v1</Link> and the directory source at{' '}
         <a href="https://github.com/Startvest-LLC/theintegrityframework">
           github.com/Startvest-LLC/theintegrityframework
         </a>

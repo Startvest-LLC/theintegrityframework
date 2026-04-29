@@ -52,7 +52,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Who runs The Integrity Framework?',
-    a: 'The Integrity Framework is published and operated by Startvest LLC, a veteran-owned, SDVOSB-certified company. The directory is at theintegrityframework.org; the canonical framework spec lives at claritylift.ai/framework/v1.',
+    a: 'The Integrity Framework is published and operated by Startvest LLC, a veteran-owned, SDVOSB-certified company. The directory and the canonical framework spec both live at theintegrityframework.org; the v1.0 spec is at theintegrityframework.org/framework/v1.',
   },
 ];
 
@@ -82,7 +82,7 @@ const articleSchema = {
     name: 'The Integrity Framework',
     description:
       'A standard for product trustworthiness for sub-enterprise AI tools where SOC 2 does not apply.',
-    inDefinedTermSet: 'https://claritylift.ai/framework/v1',
+    inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
     termCode: 'integrity-framework',
   },
 };
@@ -156,10 +156,10 @@ export default function WhatIsTheIntegrityFrameworkPage() {
           <h2 className="mt-12">How it works</h2>
           <ol className="mt-4 list-decimal pl-6 space-y-3 text-surface-700">
             <li>
-              <strong>Read the framework.</strong> The canonical spec lives at{' '}
-              <a href="https://claritylift.ai/framework/v1" className="text-brand-700 underline">
-                claritylift.ai/framework/v1
-              </a>{' '}
+              <strong>Read the framework.</strong> The canonical v1.0 spec lives at{' '}
+              <Link href="/framework/v1" className="text-brand-700 underline">
+                /framework/v1
+              </Link>{' '}
               under CC BY 4.0. Forkable by design.
             </li>
             <li>

@@ -35,7 +35,7 @@ StartVest LLC. SDVOSB/VOSB certified. UEI: FJ4ZFNG4XS54. CAGE: 18X56. Founder: T
 - Full reference: /llms-full.txt
 - Listings index: /listings
 - Listings JSON API: /api/listings.json
-- The Integrity Framework v1 (canonical): https://claritylift.ai/framework/v1
+- The Integrity Framework v1 (canonical): https://theintegrityframework.org/framework/v1
 - Directory methodology: /methodology
 - Submit a listing: /submit
 - Directory's own INTEGRITY.md: https://github.com/Startvest-LLC/theintegrityframework/blob/master/INTEGRITY.md
