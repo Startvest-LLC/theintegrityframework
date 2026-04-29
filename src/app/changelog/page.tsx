@@ -17,6 +17,21 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.1.8',
+    date: '2026-04-28',
+    changes: [
+      'Spec relocation. The canonical v1.0 framework spec now lives at /framework/v1 on this site. Previously the canonical home was claritylift.ai/framework, with the directory site\'s /framework/v1 acting as a 307 redirect to it. The framework deserves a neutral home — Startvest still originates and operates it, but the canonical text should not live on a Startvest product domain. v1.0 wording is unchanged.',
+      '/framework/v1: full spec rendered locally — five failure modes, six pre-build vetoes, seven architectural constraints (plus one v1.1 candidate), seven operational guardrails (plus one v1.1 candidate), eight-layer moat model, six-row vendor scorecard, operator self-grades for the three Startvest products, fork invitation, citation block, version history.',
+      '/framework: overview page repointed to the local /framework/v1 instead of linking out to claritylift.ai. Buttons swapped to "Read the canonical v1.0 spec" and "Why the framework looks like this".',
+      'Footer surfaces the local canonical spec link and the new /framework/why entry.',
+      '/methodology JSON-LD isBasedOn flips to theintegrityframework.org/framework/v1.',
+      '/what-is-the-integrity-framework FAQ + JSON-LD inDefinedTermSet flip to the local canonical.',
+      'cli/manifests/base-v1.json frameworkUrl flips to the local canonical (was previously startvest.ai/framework, an alternate Startvest path that never served the spec).',
+      'llms.txt and llms-full.txt point at the local canonical.',
+      'Sitemap includes /framework/v1 with yearly change frequency (frozen URL) and 0.95 priority.',
+    ],
+  },
+  {
     version: '0.1.7',
     date: '2026-04-26',
     changes: [

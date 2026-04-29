@@ -34,7 +34,7 @@ const articleSchema = {
   inLanguage: 'en-US',
   mainEntityOfPage: PAGE_URL,
   url: PAGE_URL,
-  isBasedOn: 'https://claritylift.ai/framework/v1',
+  isBasedOn: 'https://theintegrityframework.org/framework/v1',
   version: VERSION,
 };
 

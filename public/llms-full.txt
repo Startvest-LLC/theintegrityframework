@@ -20,7 +20,7 @@ A public registry of products that have published an INTEGRITY.md and self-mappe
 StartVest LLC. SDVOSB/VOSB certified. UEI: FJ4ZFNG4XS54. CAGE: 18X56. Founder: Tom Pinder. Hampstead, NC.
 
 ## The framework, in one paragraph
-The Integrity Framework v1.0 organizes product trust assertions into layers. Layer 1 is the six "vetoes": absolute non-starters that disqualify a product from any listing (e.g. covert data sale, training on customer data without disclosure). Above Layer 1 are positive assertions a product can make about its handling of inputs, outputs, model selection, and disclosures. The canonical framework is hosted at https://claritylift.ai/framework/v1.
+The Integrity Framework v1.0 organizes product trust assertions into layers. Layer 1 is the six "vetoes": absolute non-starters that disqualify a product from any listing (e.g. covert data sale, training on customer data without disclosure). Above Layer 1 are positive assertions a product can make about its handling of inputs, outputs, model selection, and disclosures. The canonical framework is hosted at https://theintegrityframework.org/framework/v1.
 
 ## Listing tiers
 - Bronze. Public INTEGRITY.md in the product's repo or site. All six Layer 1 vetoes mapped to a "yes/no with evidence" position. Free. Reviewed manually.
