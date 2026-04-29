@@ -127,7 +127,7 @@ export default function MethodologyPage() {
           <li>Persistent failure with no remediation results in delisting with a public note.</li>
           <li>Founder request: silent removal. Founders own their listing.</li>
           <li>Discovered fraud: delisting with a public note plus permanent ban from re-listing.</li>
-          <li>Delisted listings remain in a public archive page so the audit trail survives.</li>
+          <li>Delistings are noted in <Link href="/changelog">/changelog</Link> so the audit trail survives.</li>
         </ul>
         <p className="mt-3 text-sm text-surface-500">
           A directory that quietly removes failed listings looks like it is hiding from its own rule set.

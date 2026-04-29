@@ -17,6 +17,14 @@ type Entry = {
 
 const ENTRIES: Entry[] = [
   {
+    version: '0.1.9',
+    date: '2026-04-29',
+    changes: [
+      '/removed page deleted. The page archived delisted listings, but it had stayed empty since launch and the surface area was disproportionate to the value. Delistings, when they happen, are now noted in this /changelog instead. Methodology updated to reflect the new audit-trail location. Footer + sitemap drop the /removed entry.',
+      'No change to the framework spec, the tier system, the rescan automation, or any other mechanism. This is a small directory simplification, not a model change.',
+    ],
+  },
+  {
     version: '0.1.8',
     date: '2026-04-28',
     changes: [

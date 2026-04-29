@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/what-is-the-integrity-framework`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/methodology`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/changelog`, lastModified, changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${base}/removed`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/submit`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/submit/form`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
   ];
