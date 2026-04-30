@@ -1,7 +1,30 @@
 {
   "version": "0.1",
-  "lastUpdated": "2026-04-26",
+  "lastUpdated": "2026-04-30",
   "listings": [
+    {
+      "slug": "hireposture",
+      "name": "Hireposture",
+      "description": "ADA Title I pre-posting JD compliance check. Documented review chain over certification artifact. Memo signing gate enforced at the data layer.",
+      "homepageUrl": "https://hireposture.com",
+      "integrityMdUrl": "https://hireposture.com/integrity",
+      "silverCredential": {
+        "kind": "methodology-page",
+        "url": "https://hireposture.com/methodology"
+      },
+      "tier": "silver",
+      "license": "closed-source",
+      "category": "AI for compliance & trust",
+      "operator": {
+        "name": "Startvest LLC",
+        "isDirectoryOperator": true,
+        "url": "https://startvest.ai"
+      },
+      "firstListedDate": "2026-04-30",
+      "lastRescannedDate": "2026-04-30",
+      "state": "active",
+      "rationale": "First-party Startvest product. Listed under disclosure-asterisk per Veto 2. Memo signing gate (CRIT-HP-MEMO-SIGNATURE-GATE) enforces human signature on every AI-derived compliance memo before export. Audit trail append-only, 7-year retention floor at the DB-trigger layer. Layer 1 Veto 6 currently PARTIAL pre-counsel-review; flips PASS when rule library is attorney-attested. Honestly classified."
+    },
     {
       "slug": "claritylift",
       "name": "ClarityLift",

@@ -32,9 +32,49 @@ const CASES = [
     slug: 'fieldledger',
     title: 'FieldLedger, the first portfolio audit',
     summary:
-      'Second case study. The Integrity Framework applied to a Startvest product. 14 PASS / 5 PARTIAL or NEEDS UPDATE / 1 DEFERRED / 0 FAIL across 20 dimensions. The audit also surfaced two false negatives in the framework\'s own rule set, which were revised in base manifest v1.3.0 and v1.4.0.',
+      "First internal portfolio audit. 14 PASS / 5 PARTIAL or NEEDS UPDATE / 1 DEFERRED / 0 FAIL across 20 dimensions. Surfaced two false negatives in the framework's own rule set, revised in base manifest v1.3.0 and v1.4.0.",
     kind: 'Internal — portfolio audit',
     date: '2026-04-28',
+  },
+  {
+    slug: 'claritylift',
+    title: 'ClarityLift, the documentation-drift audit',
+    summary:
+      "Second internal portfolio audit. 13 PASS / 6 PARTIAL or NEEDS UPDATE / 1 BUYER-DRIVEN / 0 FAIL across 22 dimensions. Two of three failures were claims in INTEGRITY.md that referenced code never actually shipped — three days after the entry was written. Drove HIGH-SV-INTEGRITY-MD-CLAIMS-VERIFIABLE in base manifest v1.5.0.",
+    kind: 'Internal — portfolio audit',
+    date: '2026-04-28',
+  },
+  {
+    slug: 'idealift',
+    title: 'IdeaLift, retroactive TIF on a non-compliance product',
+    summary:
+      "Third internal portfolio audit. The reference for what TIF looks like when applied to a product not designed against it. Most dimensions are honestly N/A. Drove v1.6.0 (monorepo glob widening) and v1.7.0 (CLAIMS-VERIFIABLE extended to scan Outstanding Risks for reverse drift).",
+    kind: 'Internal — portfolio audit',
+    date: '2026-04-29',
+  },
+  {
+    slug: 'hireposture',
+    title: 'Hireposture, the candidate-data calibration',
+    summary:
+      "Fourth internal portfolio audit. 16 PASS / 3 PARTIAL or NEEDS UPDATE / 1 OUT-OF-SEGMENT / 0 FAIL across 20 dimensions. Surfaced the input-data-provenance vs output-attestation-provenance distinction. Drove v1.8.0 — accepting snake_case marker variants like signed_by_user_id and customer_attested.",
+    kind: 'Internal — portfolio audit',
+    date: '2026-04-29',
+  },
+  {
+    slug: 'adacompliancedocs',
+    title: 'adacompliancedocs, the validation-gate axis',
+    summary:
+      "Fifth internal portfolio audit. Surfaced a structurally new Layer 2 shape — customer-attestation-validation-gate. A customer-attested status field cannot publish until system-verified evidence supports it. Drove v1.9.0, the third C3 axis.",
+    kind: 'Internal — portfolio audit',
+    date: '2026-04-29',
+  },
+  {
+    slug: 'marketing-agent',
+    title: 'marketing-agent, the constraint-file pattern',
+    summary:
+      'Sixth internal portfolio audit. Internal Startvest tooling defended against marketing-automation failure modes by an explicit 29-item constraint file with kill-switch discipline. A different shape than the framework\'s code-pattern CI rules — being watched for in future audits, not yet codified.',
+    kind: 'Internal — portfolio audit',
+    date: '2026-04-29',
   },
 ];
 
@@ -88,10 +128,14 @@ export default function FrameworkCasesIndexPage() {
       <section className="mt-12 max-w-3xl">
         <h2>What comes next</h2>
         <p className="mt-3 text-surface-700">
-          Each subsequent portfolio audit becomes a case study. ClarityLift, IdeaLift,
-          ADAComplianceDocs, HirePosture, MA, and PRAPI are queued in that rough order. We
-          publish the audit log even when the result is uncomfortable — the framework is
-          worthless if its operators don&apos;t score themselves against it.
+          The first portfolio audit cycle ran across six product types over two days
+          (2026-04-28 / 2026-04-29). PRAPI is the seventh and is scheduled for v0.1 ship — its
+          codebase doesn&apos;t exist yet. Quarterly cross-product re-audits begin ~July 2026.
+          See the{' '}
+          <Link href="/framework/audit-log" className="text-brand-700 hover:text-brand-800 underline">
+            audit log
+          </Link>{' '}
+          for the v1.2.0 → v1.10.0 base-manifest revisions and which audit triggered each.
         </p>
         <p className="mt-3 text-surface-700">
           External case suggestions welcome at{' '}
