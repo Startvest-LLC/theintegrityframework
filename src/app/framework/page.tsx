@@ -90,22 +90,29 @@ export default function FrameworkPage() {
       </section>
 
       <section className="mt-12 max-w-3xl">
-        <h2>Case studies</h2>
+        <h2>How the framework evolves</h2>
         <p className="mt-3 text-surface-700">
-          Two cases live at <Link href="/framework/cases">/framework/cases</Link>. The{' '}
-          <Link href="/framework/cases/delve" className="text-brand-700">Delve case</Link>{' '}
-          walks a publicly-reported failure through the framework — teaching material, citing
-          public reporting only. The{' '}
-          <Link href="/framework/cases/fieldledger" className="text-brand-700">
-            FieldLedger audit
-          </Link>{' '}
-          is the first internal portfolio audit; it also documents two false negatives the audit
-          found in the framework&apos;s own rule set, and how they were closed in base manifest
-          v1.3.0 and v1.4.0.
+          The framework is run, not just published. Its base manifest carries a public revision
+          history at <Link href="/framework/audit-log" className="text-brand-700">/framework/audit-log</Link>{' '}
+          — every revision is driven by a real product audit, never speculation. Nine revisions
+          across two days during the first portfolio audit cycle (v1.2.0 → v1.10.0).
         </p>
         <p className="mt-3 text-surface-700">
-          Each subsequent portfolio audit becomes a new case study. ClarityLift is next in the
-          queue.
+          Seven case studies live at{' '}
+          <Link href="/framework/cases" className="text-brand-700">/framework/cases</Link>. One
+          external (
+          <Link href="/framework/cases/delve" className="text-brand-700">Delve</Link>, walking a
+          publicly-reported failure through the framework — teaching material, citing public
+          reporting only) and six internal portfolio audits across six product types:{' '}
+          <Link href="/framework/cases/fieldledger" className="text-brand-700">FieldLedger</Link>,{' '}
+          <Link href="/framework/cases/claritylift" className="text-brand-700">ClarityLift</Link>,{' '}
+          <Link href="/framework/cases/idealift" className="text-brand-700">IdeaLift</Link>,{' '}
+          <Link href="/framework/cases/hireposture" className="text-brand-700">Hireposture</Link>,{' '}
+          <Link href="/framework/cases/adacompliancedocs" className="text-brand-700">adacompliancedocs</Link>,
+          and{' '}
+          <Link href="/framework/cases/marketing-agent" className="text-brand-700">marketing-agent</Link>.
+          Each case publishes the headline finding, layer summary, framework revisions triggered,
+          and links to the in-repo INTEGRITY.md and full compliance matrix.
         </p>
       </section>
 
