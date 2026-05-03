@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/framework/cases/adacompliancedocs`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/framework/cases/marketing-agent`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/what-is-the-integrity-framework`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/integrity-framework-vs-coso`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/implement-integrity-framework-90-days`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/methodology`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/changelog`, lastModified, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/submit`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
