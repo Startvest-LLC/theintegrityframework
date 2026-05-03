@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://theintegrityframework.org/specs/brief-md/v0.1.0/schema.json",
+  "title": "brief.md v0.1.0",
+  "description": "Operator-published brand context — voice rules, credentials, identity, available assets — portable across tools.",
+  "type": "object",
+  "required": ["frontmatter", "sections"],
+  "properties": {
+    "frontmatter": {
+      "type": "object",
+      "required": ["spec_version", "document_type", "last_updated", "sections"],
+      "properties": {
+        "spec_version": {
+          "type": "string",
+          "enum": ["0.1.0"],
+          "description": "Spec version. Consumers MAY refuse to parse unrecognized versions."
+        },
+        "spec_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL pointer to the spec document. Discovery anchor for tools that haven't seen brief.md before — fetch this URL to learn the format. Optional but recommended; v0.2.0 will mark required.",
+          "examples": ["https://theintegrityframework.org/specs/brief-md/v0.1.0"]
+        },
+        "document_type": {
+          "type": "string",
+          "enum": ["operator-brief", "brand-brief", "journalist-brief"]
+        },
+        "operator_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "description": "URL-safe slug. Required for operator-brief."
+        },
+        "operator_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semver. Required for operator-brief."
+        },
+        "brand_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "description": "URL-safe slug. Required for brand-brief."
+        },
+        "brand_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "parent_operator_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "description": "Required for brand-brief; references the parent operator's slug."
+        },
+        "journalist_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "journalist_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO date."
+        },
+        "sections": {
+          "type": "object",
+          "description": "Canonical section-scope index. Authoritative source for which sections are public / pitch-shareable / private.",
+          "additionalProperties": {
+            "type": "string",
+            "enum": ["public", "pitch-shareable", "private"]
+          },
+          "examples": [
+            {
+              "identity": "public",
+              "credentials": "public",
+              "voice-rules": "public"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "document_type": { "const": "operator-brief" } } },
+          "then": { "required": ["operator_id", "operator_version"] }
+        },
+        {
+          "if": { "properties": { "document_type": { "const": "brand-brief" } } },
+          "then": {
+            "required": ["brand_id"],
+            "anyOf": [
+              { "required": ["operator_id"] },
+              { "required": ["parent_operator_id"] }
+            ]
+          }
+        }
+      ]
+    },
+    "sections": {
+      "type": "object",
+      "description": "Parsed section content, keyed by canonical section slug.",
+      "properties": {
+        "identity": { "$ref": "#/$defs/keyValueSection" },
+        "credentials": { "$ref": "#/$defs/listSection" },
+        "voice-rules": { "$ref": "#/$defs/voiceRulesSection" },
+        "public-links": { "$ref": "#/$defs/keyValueSection" },
+        "submission-assets": { "$ref": "#/$defs/keyValueSection" }
+      },
+      "additionalProperties": { "$ref": "#/$defs/genericSection" }
+    },
+    "raw_markdown": {
+      "type": "string",
+      "description": "Full source markdown verbatim. Optional in JSON serializations for clients that want the original."
+    }
+  },
+  "$defs": {
+    "keyValueSection": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "listSection": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "voiceRulesSection": {
+      "type": "object",
+      "properties": {
+        "subsections": {
+          "type": "object",
+          "properties": {
+            "banned-phrases": { "$ref": "#/$defs/listSection" },
+            "banned-characters": { "$ref": "#/$defs/listSection" },
+            "tone-rules": { "$ref": "#/$defs/keyValueSection" }
+          }
+        }
+      }
+    },
+    "genericSection": {
+      "type": "object",
+      "description": "Any section not in the canonical v0.1.0 list. Carried verbatim for forward compatibility.",
+      "properties": {
+        "raw_markdown": { "type": "string" }
+      }
+    }
+  }
+}
