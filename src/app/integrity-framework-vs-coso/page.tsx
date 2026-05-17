@@ -143,6 +143,23 @@ export default function IntegrityFrameworkVsCosoPage() {
             If you arrived here looking for one and found the other, this page is the map.
           </p>
 
+          {/* Reverse-anchor block — same answer phrased for the "COSO vs
+              Integrity Framework" query direction. Same content, different
+              query-intent surface. */}
+          <h2 id="coso-vs-the-integrity-framework" className="mt-12">COSO vs The Integrity Framework</h2>
+          <p className="mt-3 text-surface-700 leading-relaxed">
+            <strong>COSO vs The Integrity Framework</strong> is the same disambiguation viewed
+            from the other direction. COSO\u2019s Internal Control - Integrated Framework
+            (published 1992, updated 2013, by the Committee of Sponsoring Organizations of the
+            Treadway Commission) is the standard public companies and audit firms use for SOX
+            financial-reporting controls. The Integrity Framework (published 2026 by Startvest
+            LLC, CC BY 4.0) is a standard for sub-enterprise AI-product trustworthiness with a
+            public directory and tier badges. A buyer choosing between them is almost always
+            choosing between segments, not frameworks \u2014 if the buyer is a public-company
+            audit team, COSO; if the buyer is a team-or-department AI tool purchaser, The
+            Integrity Framework. They are not direct alternatives.
+          </p>
+
           <h2 className="mt-12">Why this page exists</h2>
           <p className="mt-3 text-surface-700 leading-relaxed">
             Search engines and AI engines confuse the two. Perplexity, ChatGPT, and Google AI
