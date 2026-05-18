@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/framework/v1.json`, lastModified, changeFrequency: 'yearly', priority: 0.85 },
     { url: `${base}/framework/why`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/framework/audit-log`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/framework/audit-2026-q2`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/framework/cases`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/framework/cases/delve`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/framework/cases/fieldledger`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
