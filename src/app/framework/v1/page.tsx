@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   title: 'The Integrity Framework v1.0',
   description:
     'The Integrity Framework v1.0. Frozen canonical spec. Three operational layers, eight moat layers, six buyer questions. Originated by Startvest LLC. Published under CC BY 4.0. Hosted on the framework\'s neutral domain.',
-  alternates: { canonical: '/framework/v1' },
+  alternates: {
+    canonical: '/framework/v1',
+    // Crawlers and LLM aggregators that prefer structured data over rendered
+    // HTML can fetch the same spec as a single JSON-LD document.
+    types: { 'application/ld+json': '/framework/v1.json' },
+  },
   openGraph: {
     title: 'The Integrity Framework v1.0',
     description:
