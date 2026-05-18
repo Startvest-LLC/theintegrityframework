@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rfc SYSTEM "rfc2629-xhtml.ent">
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude"
+     ipr="trust200902"
+     docName="draft-pinder-integrity-md-00"
+     category="info"
+     consensus="false"
+     submissionType="independent"
+     version="3"
+     tocInclude="true"
+     tocDepth="3">
+
+  <front>
+    <title abbrev="INTEGRITY.md">
+      INTEGRITY.md: A File Format for Sub-Enterprise AI Product Trust Self-Mapping
+    </title>
+    <seriesInfo name="Internet-Draft" value="draft-pinder-integrity-md-00"/>
+
+    <author fullname="Tom Pinder" initials="T." surname="Pinder">
+      <organization>Startvest LLC</organization>
+      <address>
+        <postal>
+          <street>Hampstead, NC</street>
+          <country>US</country>
+        </postal>
+        <email>integrity@theintegrityframework.org</email>
+        <uri>https://theintegrityframework.org</uri>
+      </address>
+    </author>
+
+    <date year="2026" month="May" day="18"/>
+
+    <area>Applications</area>
+    <workgroup>Independent Submission</workgroup>
+
+    <keyword>integrity</keyword>
+    <keyword>trust</keyword>
+    <keyword>ai</keyword>
+    <keyword>compliance</keyword>
+    <keyword>verifiability</keyword>
+    <keyword>self-attestation</keyword>
+
+    <abstract>
+      <t>
+        This document describes INTEGRITY.md, a plain Markdown file format for
+        publishing self-mapped product trust artifacts. INTEGRITY.md addresses
+        a gap in the existing trust-artifact ecosystem: small software products
+        (typically priced under five thousand US dollars in annual recurring
+        revenue per customer) for which audited control frameworks such as
+        SOC 2 are economically and structurally inappropriate. The format is
+        a six-section self-mapping against the Layer 1 vetoes of an underlying
+        framework specification, designed to be reachable at a stable URL, free
+        of authentication, and verifiable mechanically by third parties.
+      </t>
+      <t>
+        This document is for informational purposes and does not propose an
+        IETF standard.
+      </t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section anchor="introduction">
+      <name>Introduction</name>
+
+      <t>
+        The market for software product trust artifacts has bifurcated. At the
+        enterprise tier, audited frameworks such as SOC 2, ISO 27001, and the
+        NIST Cybersecurity Framework provide buyers with third-party attestation
+        backed by recurring audits. At the consumer tier, browser sandboxing
+        and platform-level controls perform much of the trust work without
+        product-side participation.
+      </t>
+
+      <t>
+        The intermediate tier, comprising small business and team-purchased
+        software in the approximate range of twenty to two hundred United States
+        dollars per month and under five thousand US dollars in annual recurring
+        revenue per customer, is poorly served by either extreme. The cost of a
+        first-time SOC 2 audit (typically twenty to one hundred thousand US
+        dollars per year) exceeds plausible product revenue at this tier. The
+        buyer in this tier is not a procurement officer but a single department
+        head or team lead; the time available to evaluate a vendor is measured
+        in minutes, not weeks.
+      </t>
+
+      <t>
+        Existing alternatives have known failure modes. Vendor-authored "trust
+        pages" without supporting artifacts are unverifiable. Pay-for-badge
+        services produce a credential without altering the underlying behavior.
+        Generic privacy policies do not address product-specific concerns such
+        as use of third-party AI sub-processors.
+      </t>
+
+      <t>
+        INTEGRITY.md is a file format for publishing a self-mapped trust artifact
+        at a stable URL. It is the textual surface of a separately-published
+        framework specification (the Integrity Framework, see
+        <xref target="TIF-V1"/>) but is independent of that framework's
+        governance: any party may fork the format, publish a competing
+        framework, and produce INTEGRITY.md files mapped against that fork.
+      </t>
+
+      <section anchor="conventions">
+        <name>Conventions and Definitions</name>
+        <t>
+          The key words "<bcp14>MUST</bcp14>", "<bcp14>MUST NOT</bcp14>",
+          "<bcp14>REQUIRED</bcp14>", "<bcp14>SHALL</bcp14>",
+          "<bcp14>SHALL NOT</bcp14>", "<bcp14>SHOULD</bcp14>",
+          "<bcp14>SHOULD NOT</bcp14>", "<bcp14>RECOMMENDED</bcp14>",
+          "<bcp14>NOT RECOMMENDED</bcp14>", "<bcp14>MAY</bcp14>", and
+          "<bcp14>OPTIONAL</bcp14>" in this document are to be interpreted as
+          described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/>
+          when, and only when, they appear in all capitals, as shown here.
+        </t>
+        <t>
+          The following terms are used in this document:
+        </t>
+        <dl>
+          <dt>INTEGRITY.md</dt>
+          <dd>
+            The file format defined in this document. By convention the file is
+            named <tt>INTEGRITY.md</tt> in mixed case.
+          </dd>
+          <dt>Framework</dt>
+          <dd>
+            A separately-published specification enumerating the vetoes,
+            constraints, and guardrails an INTEGRITY.md self-maps against. This
+            document defines the file format; it does not define a specific
+            framework.
+          </dd>
+          <dt>Veto</dt>
+          <dd>
+            A pre-build trust check defined by the underlying framework. The
+            framework referenced in this document defines six Layer 1 vetoes,
+            but the file format is agnostic to the number.
+          </dd>
+          <dt>Self-mapping</dt>
+          <dd>
+            The product operator's own assessment of conformance with a veto,
+            stated as one of "Pass", "Pass with disclosed conflict", or "Fail
+            with disclosed trade-off".
+          </dd>
+          <dt>Verifier</dt>
+          <dd>
+            A third party reading the INTEGRITY.md file to make a trust
+            decision. Typically a prospective buyer; may also be a public
+            directory operator or an automated crawler.
+          </dd>
+        </dl>
+      </section>
+    </section>
+
+    <section anchor="format">
+      <name>File Format</name>
+
+      <section anchor="encoding">
+        <name>Encoding and Location</name>
+        <t>
+          An INTEGRITY.md file <bcp14>MUST</bcp14> be encoded as UTF-8
+          <xref target="RFC3629"/> Markdown
+          (<xref target="CommonMark"/> or a compatible flavor).
+        </t>
+        <t>
+          The file <bcp14>MUST</bcp14> be reachable at a stable URL without
+          authentication. The <bcp14>RECOMMENDED</bcp14> locations, in order
+          of preference, are:
+        </t>
+        <ol>
+          <li>For open-source products: at the repository root, alongside
+          README.md.</li>
+          <li>For closed-source products: at the path <tt>/integrity.md</tt> or
+          <tt>/integrity</tt> on the canonical product website (i.e., the
+          domain a buyer would discover via standard search).</li>
+          <li>At <tt>/.well-known/integrity.md</tt> on the canonical product
+          domain.</li>
+        </ol>
+        <t>
+          The file <bcp14>SHOULD</bcp14> be served with a
+          <tt>Content-Type</tt> of <tt>text/markdown; charset=utf-8</tt>
+          (<xref target="RFC7763"/>).
+        </t>
+      </section>
+
+      <section anchor="header">
+        <name>Required Header</name>
+        <t>
+          The file <bcp14>MUST</bcp14> begin with an H1 heading naming the
+          product (for example <tt># INTEGRITY.md — &lt;Product name&gt;</tt>).
+          Following the heading, the file <bcp14>MUST</bcp14> include a
+          metadata block stating, at minimum:
+        </t>
+        <ul>
+          <li>Product name and canonical URL.</li>
+          <li>Operator (legal entity).</li>
+          <li>Framework specification and version evaluated against
+          (as a URL).</li>
+          <li>Self-evaluation tier (if the framework defines tiers).</li>
+          <li>Date last updated (ISO 8601 <xref target="RFC3339"/>).</li>
+        </ul>
+        <t>
+          The metadata block <bcp14>SHOULD</bcp14> be expressed as bolded
+          key-value pairs (Markdown emphasis) to aid both human and automated
+          parsing.
+        </t>
+      </section>
+
+      <section anchor="veto-sections">
+        <name>Veto Sections</name>
+        <t>
+          The body of the file <bcp14>MUST</bcp14> contain one section per
+          veto defined by the referenced framework. Each veto section
+          <bcp14>MUST</bcp14>:
+        </t>
+        <ol>
+          <li>Be introduced by an H3 (or deeper) heading naming the veto.</li>
+          <li>Begin with a one-line outcome statement chosen from "Pass",
+          "Pass with disclosed conflict", or "Fail with disclosed trade-off".</li>
+          <li>Include at least one paragraph of plain-text explanation. The
+          explanation <bcp14>MUST</bcp14> be specific to the product; generic
+          marketing language is non-conformant.</li>
+        </ol>
+        <t>
+          A veto section <bcp14>MAY</bcp14> include additional artifact links
+          (to a methodology page, a public repository, a third-party review, or
+          comparable evidence). Links <bcp14>MUST</bcp14> resolve to publicly
+          reachable URLs.
+        </t>
+      </section>
+
+      <section anchor="optional-sections">
+        <name>Optional Sections</name>
+        <t>
+          A file <bcp14>MAY</bcp14> include sections beyond the required vetos,
+          including but not limited to:
+        </t>
+        <ul>
+          <li>Architectural constraints (Layer 2 in the framework referenced
+          here).</li>
+          <li>Operational guardrails (Layer 3 in the framework referenced
+          here).</li>
+          <li>A changelog enumerating prior versions of the file.</li>
+          <li>A statement of license under which the file is published. A CC
+          BY 4.0 <xref target="CCBY40"/> license is <bcp14>RECOMMENDED</bcp14>
+          to permit verifier redistribution and analysis.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section anchor="example">
+      <name>Example</name>
+      <t>
+        The following is a minimal conformant INTEGRITY.md self-mapped against
+        a fictional three-veto framework. A full six-veto example mapped
+        against the Integrity Framework v1.0 is available at
+        <eref target="https://theintegrityframework.org/integrity-md"/>.
+      </t>
+
+      <sourcecode type="markdown">
+<![CDATA[
+# INTEGRITY.md — ExampleProduct
+
+**Product:** ExampleProduct (https://example.test)
+**Operator:** Example Corp.
+**Framework version evaluated against:** 1.0 (https://example-framework.test/v1)
+**Self-evaluation tier:** Bronze
+**Last updated:** 2026-05-18
+
+---
+
+## Layer 1 vetoes — self-mapping
+
+### Veto 1 — Artifact versus outcome
+
+**Pass.**
+
+ExampleProduct sells outcome (working product, measurable by the buyer)
+not artifact (a badge or report). No certification language appears on
+the marketing site disconnected from the actual product behavior.
+
+### Veto 2 — Independence
+
+**Pass with disclosed conflict.**
+
+Example Corp. operates the verification directory and is also a listee
+for its own product. This is a material conflict, disclosed on each
+listing page with a footnote linking back to this section.
+
+### Veto 3 — Verifiability
+
+**Pass.**
+
+Public artifacts: source repository at https://github.com/example/product,
+changelog at https://example.test/changelog (versioned and dated), and
+this INTEGRITY.md.
+
+---
+
+## Changelog
+
+- 2026-05-18 — Initial publication against v1.0.
+
+---
+
+*Published under CC BY 4.0.*
+]]>
+      </sourcecode>
+    </section>
+
+    <section anchor="verification">
+      <name>Verification Procedure</name>
+      <t>
+        A verifier evaluating an INTEGRITY.md file <bcp14>SHOULD</bcp14>:
+      </t>
+      <ol>
+        <li>
+          Fetch the file at its stated canonical URL. The fetch
+          <bcp14>MUST</bcp14> succeed without authentication.
+        </li>
+        <li>
+          Verify the file begins with an H1 product-name heading and a
+          metadata block as defined in <xref target="header"/>.
+        </li>
+        <li>
+          Verify each veto section is present, has a recognized outcome
+          statement, and contains product-specific explanation.
+        </li>
+        <li>
+          For each artifact URL referenced in a veto section, verify the URL
+          resolves to publicly reachable content. The verifier
+          <bcp14>SHOULD</bcp14> record any URLs that fail to resolve and
+          surface them in any downstream report.
+        </li>
+        <li>
+          Where the underlying framework defines tier requirements, verify
+          the self-evaluation tier matches the artifacts presented (e.g., a
+          Silver claim requires the Silver-tier artifacts named in the
+          framework).
+        </li>
+      </ol>
+      <t>
+        A verifier <bcp14>MAY</bcp14> implement automated checks for the steps
+        above. The reference implementation
+        (<eref target="https://github.com/Startvest-LLC/startvest-integrity-cli"/>)
+        performs structural validation and URL resolution against an
+        INTEGRITY.md file.
+      </t>
+    </section>
+
+    <section anchor="security">
+      <name>Security Considerations</name>
+      <t>
+        INTEGRITY.md is a self-authored trust artifact. A verifier
+        <bcp14>MUST NOT</bcp14> treat it as equivalent to an audited
+        attestation. The format's value lies in producing a fixed, public
+        surface against which a verifier can apply their own scrutiny;
+        the responsibility for that scrutiny rests with the verifier.
+      </t>
+      <t>
+        Operators publishing an INTEGRITY.md <bcp14>SHOULD</bcp14> be aware
+        that the published file becomes part of the public record. Statements
+        made in the file are admissible in subsequent disputes about
+        product behavior. Cosmetic statements (those that pass the textual
+        test of the format but fail to address product-specific concerns)
+        are likely to be cited adversely in such disputes.
+      </t>
+      <t>
+        Verifiers <bcp14>SHOULD</bcp14> be aware that artifact URLs cited
+        in an INTEGRITY.md may change after the file is fetched. A
+        snapshot-and-archive workflow is <bcp14>RECOMMENDED</bcp14> for any
+        verifier intending to act on the file's contents at a later time.
+      </t>
+      <t>
+        This document does not specify any cryptographic mechanism for
+        binding an INTEGRITY.md to a specific operator. Such mechanisms
+        (for example, signed commits in a repository, or DNS-based domain
+        verification) are out of scope and are left to operators and
+        verifiers to negotiate.
+      </t>
+    </section>
+
+    <section anchor="iana">
+      <name>IANA Considerations</name>
+      <t>
+        This document has no IANA actions.
+      </t>
+    </section>
+  </middle>
+
+  <back>
+    <references>
+      <name>Normative References</name>
+
+      <reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119">
+        <front>
+          <title>Key words for use in RFCs to Indicate Requirement Levels</title>
+          <author fullname="S. Bradner" initials="S." surname="Bradner"/>
+          <date year="1997" month="March"/>
+        </front>
+        <seriesInfo name="BCP" value="14"/>
+        <seriesInfo name="RFC" value="2119"/>
+      </reference>
+
+      <reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174">
+        <front>
+          <title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title>
+          <author fullname="B. Leiba" initials="B." surname="Leiba"/>
+          <date year="2017" month="May"/>
+        </front>
+        <seriesInfo name="BCP" value="14"/>
+        <seriesInfo name="RFC" value="8174"/>
+      </reference>
+
+      <reference anchor="RFC3629" target="https://www.rfc-editor.org/info/rfc3629">
+        <front>
+          <title>UTF-8, a transformation format of ISO 10646</title>
+          <author fullname="F. Yergeau" initials="F." surname="Yergeau"/>
+          <date year="2003" month="November"/>
+        </front>
+        <seriesInfo name="STD" value="63"/>
+        <seriesInfo name="RFC" value="3629"/>
+      </reference>
+
+      <reference anchor="RFC3339" target="https://www.rfc-editor.org/info/rfc3339">
+        <front>
+          <title>Date and Time on the Internet: Timestamps</title>
+          <author fullname="G. Klyne" initials="G." surname="Klyne"/>
+          <author fullname="C. Newman" initials="C." surname="Newman"/>
+          <date year="2002" month="July"/>
+        </front>
+        <seriesInfo name="RFC" value="3339"/>
+      </reference>
+
+      <reference anchor="RFC7763" target="https://www.rfc-editor.org/info/rfc7763">
+        <front>
+          <title>The text/markdown Media Type</title>
+          <author fullname="S. Leonard" initials="S." surname="Leonard"/>
+          <date year="2016" month="March"/>
+        </front>
+        <seriesInfo name="RFC" value="7763"/>
+      </reference>
+    </references>
+
+    <references>
+      <name>Informative References</name>
+
+      <reference anchor="TIF-V1" target="https://theintegrityframework.org/framework/v1">
+        <front>
+          <title>The Integrity Framework v1.0</title>
+          <author fullname="Tom Pinder" initials="T." surname="Pinder">
+            <organization>Startvest LLC</organization>
+          </author>
+          <date year="2026" month="April"/>
+        </front>
+      </reference>
+
+      <reference anchor="CommonMark" target="https://spec.commonmark.org/0.31.2/">
+        <front>
+          <title>CommonMark Specification</title>
+          <author fullname="J. MacFarlane" initials="J." surname="MacFarlane"/>
+          <date year="2024" month="January"/>
+        </front>
+      </reference>
+
+      <reference anchor="CCBY40" target="https://creativecommons.org/licenses/by/4.0/">
+        <front>
+          <title>Creative Commons Attribution 4.0 International Public License</title>
+          <author>
+            <organization>Creative Commons</organization>
+          </author>
+          <date year="2013"/>
+        </front>
+      </reference>
+    </references>
+
+    <section anchor="acknowledgements" numbered="false">
+      <name>Acknowledgements</name>
+      <t>
+        The Integrity Framework, including the six Layer 1 vetoes referenced
+        in this document, was developed by Startvest LLC in early 2026 as a
+        response to the trust-artifact gap for sub-enterprise software
+        products. The format described here is the textual surface of that
+        framework, abstracted to permit independent forks.
+      </t>
+    </section>
+  </back>
+</rfc>
