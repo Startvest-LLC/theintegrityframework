@@ -1,6 +1,10 @@
 # theintegrityframework.org
 
+[![integrity.md](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Startvest-LLC/theintegrityframework/master/.github/integrity-badge.json)](https://github.com/Startvest-LLC/theintegrityframework/actions/workflows/integrity.yml)
+
 The Integrity Framework Directory — a public directory of products evaluated against the Startvest Integrity Framework.
+
+The badge above is produced on every push to `master` by [`integrity-md-action`](https://github.com/Startvest-LLC/integrity-md-action) running against this repo's own [`INTEGRITY.md`](./INTEGRITY.md). Directory-operator-eats-its-own-dogfood, in CI form.
 
 ## Stack
 
