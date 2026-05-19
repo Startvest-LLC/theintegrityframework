@@ -1,0 +1,1757 @@
+[
+  {
+    "name": "Vanta",
+    "url": "https://www.vanta.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:24:56.554Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [
+        "audit-ready"
+      ],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 4,
+      "privacyUrl": "https://www.vanta.com/legal/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.vanta.com/pricing",
+      "pricingHasDollar": false,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "risk",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "hidden",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Drata",
+    "url": "https://drata.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:25:08.043Z",
+    "signals": {
+      "homepageStatus": 403
+    },
+    "scores": {},
+    "notes": [
+      "Homepage returned HTTP 403"
+    ]
+  },
+  {
+    "name": "Secureframe",
+    "url": "https://secureframe.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:25:09.127Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [
+        "get soc 2"
+      ],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 8,
+      "privacyUrl": "https://secureframe.com/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://secureframe.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "risk",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Sprinto",
+    "url": "https://sprinto.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:25:21.426Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://sprinto.com/privacy/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://sprinto.com/pricing/",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Conveyor",
+    "url": "https://www.conveyor.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:25:35.261Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://www.conveyor.com/legal/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.conveyor.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Tugboat Logic",
+    "url": "https://www.tugboatlogic.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:25:48.154Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "privacyUrl": "https://www.onetrust.com/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.onetrust.com/",
+      "pricingHasDollar": false,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "hidden",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Thoropass",
+    "url": "https://thoropass.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:25:59.200Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [
+        "audit-ready",
+        "audit ready"
+      ],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://thoropass.com/privacy-policy",
+      "aiSubprocessorMentions": [
+        "openai"
+      ],
+      "pricingUrl": "https://www.thoropass.com/",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "risk",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Probo",
+    "url": "https://www.getprobo.com",
+    "category": "compliance",
+    "fetchedAt": "2026-05-18T18:26:11.659Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [
+        "get soc 2",
+        "audit-ready"
+      ],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://www.probo.com/privacy",
+      "aiSubprocessorMentions": []
+    },
+    "scores": {
+      "v1": "risk",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "no-pricing-page",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /pricing or /plans page reachable for V5 audit"
+    ]
+  },
+  {
+    "name": "AccessiBE",
+    "url": "https://accessibe.com",
+    "category": "accessibility",
+    "fetchedAt": "2026-05-18T18:26:24.863Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://accessibe.com/wp-content/uploads/2025/11/privacy.jpg",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://accessibe.com/pricing/accesswidget",
+      "pricingHasDollar": false,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "hidden",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "AudioEye",
+    "url": "https://www.audioeye.com",
+    "category": "accessibility",
+    "fetchedAt": "2026-05-18T18:26:51.489Z",
+    "signals": {
+      "homepageStatus": 429
+    },
+    "scores": {},
+    "notes": [
+      "Homepage returned HTTP 429"
+    ]
+  },
+  {
+    "name": "UserWay",
+    "url": "https://userway.org",
+    "category": "accessibility",
+    "fetchedAt": "2026-05-18T18:26:52.824Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://userway.org/privacy/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://userway.org/pricing/",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Reciteme",
+    "url": "https://reciteme.com",
+    "category": "accessibility",
+    "fetchedAt": "2026-05-18T18:27:06.565Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 0,
+      "privacyUrl": "https://reciteme.com/policies/privacy-policy/",
+      "aiSubprocessorMentions": []
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "fail",
+      "v4": "flag-no-mention",
+      "v5": "no-pricing-page",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /pricing or /plans page reachable for V5 audit"
+    ]
+  },
+  {
+    "name": "Cursor",
+    "url": "https://www.cursor.com",
+    "category": "ai-dev",
+    "fetchedAt": "2026-05-18T18:27:26.734Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 4,
+      "privacyUrl": "https://cursor.com/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://cursor.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Codeium / Windsurf",
+    "url": "https://codeium.com",
+    "category": "ai-dev",
+    "fetchedAt": "2026-05-18T18:27:39.864Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "privacyUrl": "https://windsurf.com/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://windsurf.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com",
+    "category": "ai-dev",
+    "fetchedAt": "2026-05-18T18:27:53.810Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://www.tabnine.com/privacy-policy/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.tabnine.com/pricing/",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Continue.dev",
+    "url": "https://www.continue.dev",
+    "category": "ai-dev",
+    "fetchedAt": "2026-05-18T18:28:09.100Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "privacyUrl": "https://www.continue.dev/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.continue.dev/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Helicone",
+    "url": "https://www.helicone.ai",
+    "category": "ai-ops",
+    "fetchedAt": "2026-05-18T18:28:22.350Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://www.helicone.ai/privacy",
+      "aiSubprocessorMentions": [
+        "openai",
+        "anthropic"
+      ],
+      "pricingUrl": "https://www.helicone.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Langfuse",
+    "url": "https://langfuse.com",
+    "category": "ai-ops",
+    "fetchedAt": "2026-05-18T18:28:33.176Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://langfuse.com/privacy",
+      "aiSubprocessorMentions": [
+        "openai"
+      ],
+      "pricingUrl": "https://langfuse.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "pass",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Portkey",
+    "url": "https://portkey.ai",
+    "category": "ai-ops",
+    "fetchedAt": "2026-05-18T18:28:44.514Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://portkey.ai/privacy-policy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://portkey.ai/pricing",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "LangChain",
+    "url": "https://www.langchain.com",
+    "category": "ai-ops",
+    "fetchedAt": "2026-05-18T18:28:55.729Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://www.langchain.com/privacy-policy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.langchain.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "LlamaIndex",
+    "url": "https://www.llamaindex.ai",
+    "category": "ai-ops",
+    "fetchedAt": "2026-05-18T18:29:07.649Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://www.llamaindex.ai/legal/privacy-notice",
+      "aiSubprocessorMentions": [
+        "openai",
+        "claude",
+        "perplexity"
+      ],
+      "pricingUrl": "https://www.llamaindex.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "CrewAI",
+    "url": "https://www.crewai.com",
+    "category": "ai-agents",
+    "fetchedAt": "2026-05-18T18:29:20.909Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://crewai.com/privacy-policy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://crewai.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "BaseAI",
+    "url": "https://baseai.dev",
+    "category": "ai-agents",
+    "fetchedAt": "2026-05-18T18:29:34.003Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 0,
+      "aiSubprocessorMentions": null
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "fail",
+      "v4": "no-privacy-page",
+      "v5": "no-pricing-page",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /privacy page reachable for V4 audit",
+      "No /pricing or /plans page reachable for V5 audit"
+    ]
+  },
+  {
+    "name": "Pinecone",
+    "url": "https://www.pinecone.io",
+    "category": "vector-db",
+    "fetchedAt": "2026-05-18T18:29:50.408Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://www.pinecone.io/privacy/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.pinecone.io/pricing/",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Weaviate",
+    "url": "https://weaviate.io",
+    "category": "vector-db",
+    "fetchedAt": "2026-05-18T18:30:03.196Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://weaviate.io/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://weaviate.io/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Qdrant",
+    "url": "https://qdrant.tech",
+    "category": "vector-db",
+    "fetchedAt": "2026-05-18T18:30:14.226Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [
+        "compliance badge"
+      ],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 0,
+      "aiSubprocessorMentions": null,
+      "pricingUrl": "https://qdrant.tech/pricing/",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "risk",
+      "v3": "fail",
+      "v4": "no-privacy-page",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /privacy page reachable for V4 audit"
+    ]
+  },
+  {
+    "name": "Chroma",
+    "url": "https://www.trychroma.com",
+    "category": "vector-db",
+    "fetchedAt": "2026-05-18T18:30:28.786Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "privacyUrl": "https://www.trychroma.com/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.trychroma.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Mem",
+    "url": "https://mem.ai",
+    "category": "knowledge",
+    "fetchedAt": "2026-05-18T18:30:41.136Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "privacyUrl": "https://mem.ai/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://mem.ai/pricing",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Granola",
+    "url": "https://www.granola.ai",
+    "category": "meetings",
+    "fetchedAt": "2026-05-18T18:30:53.151Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://docs.granola.ai/help-center/policies/privacy-policy",
+      "aiSubprocessorMentions": [
+        "openai",
+        "anthropic"
+      ],
+      "pricingUrl": "https://www.granola.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "pass",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Fathom",
+    "url": "https://fathom.video",
+    "category": "meetings",
+    "fetchedAt": "2026-05-18T18:31:07.063Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://www.fathom.ai/privacy",
+      "aiSubprocessorMentions": [
+        "openai",
+        "anthropic",
+        "claude",
+        "chatgpt"
+      ],
+      "pricingUrl": "https://www.fathom.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Fireflies",
+    "url": "https://fireflies.ai",
+    "category": "meetings",
+    "fetchedAt": "2026-05-18T18:31:19.004Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://fireflies.ai/privacy-policy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://fireflies.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Otter",
+    "url": "https://otter.ai",
+    "category": "meetings",
+    "fetchedAt": "2026-05-18T18:31:32.922Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 8,
+      "privacyUrl": "https://otter.ai/privacy-policy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://otter.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "category": "content",
+    "fetchedAt": "2026-05-18T18:31:46.721Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://www.copy.ai/privacy-notice",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.copy.ai/prices",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Jasper",
+    "url": "https://www.jasper.ai",
+    "category": "content",
+    "fetchedAt": "2026-05-18T18:31:59.077Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://www.jasper.ai/legal/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.jasper.ai/pricing",
+      "pricingHasDollar": false,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "hidden",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "category": "content",
+    "fetchedAt": "2026-05-18T18:32:10.492Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://rytr.me/privacy-policy",
+      "aiSubprocessorMentions": [
+        "chatgpt"
+      ],
+      "pricingUrl": "https://rytr.me/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "category": "content",
+    "fetchedAt": "2026-05-18T18:32:22.465Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://writesonic.com/legal/privacy-policy",
+      "aiSubprocessorMentions": [
+        "openai",
+        "anthropic",
+        "claude",
+        "chatgpt",
+        "perplexity"
+      ],
+      "pricingUrl": "https://writesonic.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Canny",
+    "url": "https://canny.io",
+    "category": "product-feedback",
+    "fetchedAt": "2026-05-18T18:32:34.503Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://canny.io/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://canny.io/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "ProductBoard",
+    "url": "https://www.productboard.com",
+    "category": "product-feedback",
+    "fetchedAt": "2026-05-18T18:32:46.166Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://www.productboard.com/privacy-policy/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.productboard.com/pricing/",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Sleekplan",
+    "url": "https://sleekplan.com",
+    "category": "product-feedback",
+    "fetchedAt": "2026-05-18T18:32:59.659Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://sleekplan.com/privacy/",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://sleekplan.com/pricing/",
+      "pricingHasDollar": false,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "flag-no-mention",
+      "v5": "hidden",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Featurebase",
+    "url": "https://featurebase.app",
+    "category": "product-feedback",
+    "fetchedAt": "2026-05-18T18:33:11.388Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 2,
+      "aiSubprocessorMentions": null,
+      "pricingUrl": "https://www.featurebase.app/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "no-privacy-page",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /privacy page reachable for V4 audit"
+    ]
+  },
+  {
+    "name": "Savio",
+    "url": "https://www.savio.io",
+    "category": "product-feedback",
+    "fetchedAt": "2026-05-18T18:33:26.577Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 404,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 1,
+      "privacyUrl": "https://www.savio.io/privacy/",
+      "aiSubprocessorMentions": [
+        "openai"
+      ],
+      "pricingUrl": "https://www.savio.io/pricing/",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Lindy",
+    "url": "https://www.lindy.ai",
+    "category": "ai-agents",
+    "fetchedAt": "2026-05-18T18:33:39.621Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 403,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://www.lindy.ai/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.lindy.ai/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Magic Loops",
+    "url": "https://magicloops.dev",
+    "category": "ai-agents",
+    "fetchedAt": "2026-05-18T18:33:51.016Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "privacyUrl": "https://magicloops.dev/privacy",
+      "aiSubprocessorMentions": [
+        "openai",
+        "gpt-"
+      ],
+      "pricingUrl": "https://magicloops.dev/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "pass",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Aria (Opera)",
+    "url": "https://www.opera.com/features/aria",
+    "category": "ai-assistant",
+    "fetchedAt": "2026-05-18T18:34:03.745Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 3,
+      "privacyUrl": "https://www.opera.com/legal/privacy",
+      "aiSubprocessorMentions": [
+        "openai"
+      ]
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "pass",
+      "v5": "no-pricing-page",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /pricing or /plans page reachable for V5 audit"
+    ]
+  },
+  {
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai",
+    "category": "ai-search",
+    "fetchedAt": "2026-05-18T18:34:19.317Z",
+    "signals": {
+      "homepageStatus": 403
+    },
+    "scores": {},
+    "notes": [
+      "Homepage returned HTTP 403"
+    ]
+  },
+  {
+    "name": "You.com",
+    "url": "https://you.com",
+    "category": "ai-search",
+    "fetchedAt": "2026-05-18T18:34:20.396Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 404,
+        "/methodology": 404,
+        "/.well-known/security.txt": 404
+      },
+      "trustPageCount": 2,
+      "privacyUrl": "https://you.com/privacy",
+      "aiSubprocessorMentions": [
+        "openai",
+        "anthropic"
+      ],
+      "pricingUrl": "https://you.com/pricing",
+      "pricingHasDollar": true,
+      "pricingHidden": true
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "partial",
+      "v4": "pass",
+      "v5": "mixed",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  },
+  {
+    "name": "Phind",
+    "url": "https://www.phind.com",
+    "category": "ai-search",
+    "fetchedAt": "2026-05-18T18:34:31.897Z",
+    "signals": {
+      "homepageStatus": 403
+    },
+    "scores": {},
+    "notes": [
+      "Homepage returned HTTP 403"
+    ]
+  },
+  {
+    "name": "Hex",
+    "url": "https://hex.tech",
+    "category": "data",
+    "fetchedAt": "2026-05-18T18:34:32.990Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 404,
+        "/privacy-policy": 404,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 3,
+      "aiSubprocessorMentions": null,
+      "pricingUrl": "https://hex.tech/pricing/",
+      "pricingHasDollar": true,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "no-privacy-page",
+      "v5": "pass",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /privacy page reachable for V4 audit"
+    ]
+  },
+  {
+    "name": "Hyperarrow",
+    "url": "https://www.hyperarrow.com",
+    "category": "ai-ops",
+    "fetchedAt": "2026-05-18T18:34:48.288Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 200,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 200,
+        "/integrity.md": 200,
+        "/changelog": 200,
+        "/methodology": 200,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 9,
+      "aiSubprocessorMentions": null
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "no-privacy-page",
+      "v5": "no-pricing-page",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": [
+      "No /privacy page reachable for V4 audit",
+      "No /pricing or /plans page reachable for V5 audit"
+    ]
+  },
+  {
+    "name": "Aikido",
+    "url": "https://www.aikido.dev",
+    "category": "security",
+    "fetchedAt": "2026-05-18T18:35:04.138Z",
+    "signals": {
+      "homepageStatus": 200,
+      "v1RiskTermsHit": [],
+      "trustPages": {
+        "/security": 200,
+        "/trust": 404,
+        "/privacy": 200,
+        "/privacy-policy": 200,
+        "/integrity": 404,
+        "/integrity.md": 404,
+        "/changelog": 200,
+        "/methodology": 404,
+        "/.well-known/security.txt": 200
+      },
+      "trustPageCount": 5,
+      "privacyUrl": "https://www.aikido.dev/policies/privacy",
+      "aiSubprocessorMentions": [],
+      "pricingUrl": "https://www.aikido.dev/pricing",
+      "pricingHasDollar": false,
+      "pricingHidden": false
+    },
+    "scores": {
+      "v1": "likely-pass",
+      "v3": "pass",
+      "v4": "flag-no-mention",
+      "v5": "no-signal",
+      "v2": "manual-review",
+      "v6": "manual-review"
+    },
+    "notes": []
+  }
+]
