@@ -1,0 +1,27 @@
+{
+  "$schema": "https://theintegrityframework.org/schemas/well-known-integrity.v1.json",
+  "product": {
+    "name": "The Integrity Framework Directory",
+    "url": "https://theintegrityframework.org"
+  },
+  "operator": {
+    "name": "Startvest LLC",
+    "url": "https://startvest.ai"
+  },
+  "framework": {
+    "name": "The Integrity Framework",
+    "version": "1.0",
+    "spec": "https://theintegrityframework.org/framework/v1",
+    "specJson": "https://theintegrityframework.org/framework/v1.json",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "tier": "Bronze",
+  "selfMapping": {
+    "url": "https://github.com/Startvest-LLC/theintegrityframework/blob/master/INTEGRITY.md",
+    "lastUpdated": "2026-04-25",
+    "note": "The directory is a product evaluated against the framework it publishes. Operator conflict disclosed under Veto 2."
+  },
+  "directory": {
+    "url": "https://theintegrityframework.org/listings"
+  }
+}
