@@ -23,3 +23,7 @@ next-env.d.ts
 # Re-scan reports (CI artifacts, not source)
 rescan-report.json
 rescan-report.md
+
+# Local-only notes alongside public dev-tools (named prospects, etc.)
+dev-tools/*.local.md
+dev-tools/*.local.json
