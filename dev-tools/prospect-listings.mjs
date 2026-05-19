@@ -282,7 +282,11 @@ function rankWithin(tier, p) {
 }
 
 function mdEscape(s) {
-  return String(s ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ').trim();
+  return String(s ?? '')
+    .replace(/\\/g, '\\\\')
+    .replace(/\|/g, '\\|')
+    .replace(/\n/g, ' ')
+    .trim();
 }
 
 function buildReport(byTier, generatedAt) {
