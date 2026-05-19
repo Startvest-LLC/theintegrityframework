@@ -1,0 +1,47 @@
+name: integrity
+
+# Runs Startvest-LLC/integrity-md-action against the site's own INTEGRITY.md
+# on every PR + push to master. On push to master, commits an updated
+# shields.io endpoint JSON to .github/integrity-badge.json so the badge in
+# README.md stays in sync with the latest CLI verdict.
+#
+# The directory operator running its own gate on its own repo is part of the
+# credibility story — "we publish a framework and apply it to ourselves" is
+# Veto 2 self-mapping in CI form.
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run integrity-md-action
+        id: integrity
+        uses: Startvest-LLC/integrity-md-action@v1
+        with:
+          path: .
+          badge-output: .github/integrity-badge.json
+
+      - name: Commit badge if changed
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          TIER: ${{ steps.integrity.outputs.tier }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/integrity-badge.json
+          if git diff --cached --quiet; then
+            echo "Badge unchanged ($TIER); nothing to commit."
+          else
+            git commit -m "chore(integrity): refresh badge ($TIER) [skip ci]"
+            git push
+          fi
