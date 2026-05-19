@@ -145,7 +145,14 @@ export default function FrameworkCasesIndexPage() {
           >
             integrity@startvest.ai
           </a>
-          . We work from public reporting only.
+          . We work from public reporting only. See the{' '}
+          <a
+            className="text-brand-700 hover:text-brand-800 underline"
+            href="https://github.com/Startvest-LLC/theintegrityframework/blob/master/dev-tools/case-study-template.md"
+          >
+            case-study template
+          </a>{' '}
+          for the expected structure.
         </p>
       </section>
     </article>
