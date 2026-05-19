@@ -1,0 +1,31 @@
+name: selftest
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  run-on-self:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up fixture
+        run: |
+          mkdir -p fixtures/pass
+          cp ../../INTEGRITY.md fixtures/pass/integrity.md 2>/dev/null || \
+            echo "# integrity.md fixture" > fixtures/pass/integrity.md
+      - name: Run action against fixture
+        id: integrity
+        uses: ./
+        with:
+          path: fixtures/pass
+          strict: 'false'
+        continue-on-error: true
+      - name: Show outputs
+        run: |
+          echo "exit-code: ${{ steps.integrity.outputs.exit-code }}"
+          echo "critical-count: ${{ steps.integrity.outputs.critical-count }}"
+          echo "high-count: ${{ steps.integrity.outputs.high-count }}"
+          echo "base-version: ${{ steps.integrity.outputs.base-version }}"

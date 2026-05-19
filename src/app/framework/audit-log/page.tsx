@@ -142,7 +142,7 @@ export default function FrameworkAuditLogPage() {
                   <td className="px-4 py-3">
                     {r.triggerSlug ? (
                       <Link
-                        href={`/framework/case-studies/${r.triggerSlug}`}
+                        href={`/framework/cases/${r.triggerSlug}`}
                         className="text-brand-700 hover:text-brand-800"
                       >
                         {r.trigger}
@@ -169,7 +169,7 @@ export default function FrameworkAuditLogPage() {
               <span className="text-sm text-surface-600">
                 ·{' '}
                 {r.triggerSlug ? (
-                  <Link href={`/framework/case-studies/${r.triggerSlug}`} className="text-brand-700">
+                  <Link href={`/framework/cases/${r.triggerSlug}`} className="text-brand-700">
                     {r.trigger}
                   </Link>
                 ) : (
@@ -183,6 +183,58 @@ export default function FrameworkAuditLogPage() {
             <p className="mt-3 text-surface-700">{r.summary}</p>
           </div>
         ))}
+      </section>
+
+      <section className="mt-16 max-w-3xl">
+        <h2>Versioning policy</h2>
+        <p className="mt-3 text-surface-700">
+          Two version numbers move independently. Consumers should know which they&apos;re pinning.
+        </p>
+        <div className="mt-6 overflow-x-auto rounded-lg border border-surface-200">
+          <table className="w-full text-sm">
+            <thead className="bg-surface-50 text-left">
+              <tr className="border-b border-surface-200">
+                <th className="px-4 py-3 font-semibold">Artifact</th>
+                <th className="px-4 py-3 font-semibold">Current</th>
+                <th className="px-4 py-3 font-semibold">When it bumps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-surface-200 align-top">
+                <td className="px-4 py-3 font-semibold text-surface-900">Framework spec</td>
+                <td className="px-4 py-3 font-mono text-surface-700">v1.0</td>
+                <td className="px-4 py-3 text-surface-700">
+                  Conceptual standard at <Link href="/framework/v1" className="text-brand-700 hover:text-brand-800">/framework/v1</Link>. Major bump only on shape changes (new layer, removed veto). Candidate items for the next minor are tagged inline on the spec page.
+                </td>
+              </tr>
+              <tr className="align-top">
+                <td className="px-4 py-3 font-semibold text-surface-900">Base manifest</td>
+                <td className="px-4 py-3 font-mono text-surface-700">v1.10.0</td>
+                <td className="px-4 py-3 text-surface-700">
+                  Machine-readable rule set shipped by <a href="https://github.com/Startvest-LLC/startvest-integrity-cli" className="text-brand-700 hover:text-brand-800">integrity-cli</a>. Calibration fixes and structural additions are minor; rule removals and shape changes will be major. Every bump corresponds to a row in the table above.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 className="mt-10 text-lg font-semibold text-surface-900">How to pin in CI</h3>
+        <p className="mt-3 text-surface-700">
+          Pin the CLI version, not just the major. Manifest minors add rules — a passing run on
+          v1.7.0 can fail on v1.10.0 without you changing anything.
+        </p>
+        <pre className="mt-4 overflow-x-auto rounded-md bg-surface-900 p-4 text-xs text-surface-100">
+{`# package.json or direct npx
+npx @startvest/integrity-cli@1.3.0 check . --format=json
+
+# GitHub Action (when published)
+- uses: Startvest-LLC/integrity-md-action@v1
+  with:
+    cli-version: '1.3.0'`}
+        </pre>
+        <p className="mt-4 text-sm text-surface-600">
+          The CLI version pins the manifest indirectly: each CLI release ships exactly one base
+          manifest version. Read the CLI changelog before upgrading across a minor.
+        </p>
       </section>
 
       <section className="mt-16 max-w-3xl">
@@ -202,7 +254,7 @@ export default function FrameworkAuditLogPage() {
           </li>
         </ul>
         <p className="mt-8 text-sm text-surface-500">
-          Source: <a href="https://github.com/Startvest-LLC/integrity-cli/blob/master/manifests/base-v1.json">manifests/base-v1.json</a>{' '}
+          Source: <a href="https://github.com/Startvest-LLC/startvest-integrity-cli/blob/master/manifests/base-v1.json">manifests/base-v1.json</a>{' '}
           changelog field. Every entry on this page corresponds 1:1 to a changelog entry there.
         </p>
       </section>
