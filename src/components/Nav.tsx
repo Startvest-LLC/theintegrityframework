@@ -21,6 +21,9 @@ export function Nav() {
           <Link href="/methodology" className="text-surface-700 no-underline hover:text-brand-700">
             Methodology
           </Link>
+          <Link href="/blog" className="text-surface-700 no-underline hover:text-brand-700">
+            Blog
+          </Link>
           <Link href="/submit" className="text-surface-700 no-underline hover:text-brand-700">
             Submit
           </Link>
