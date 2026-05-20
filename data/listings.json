@@ -116,7 +116,7 @@
     {
       "slug": "vettedhaul",
       "name": "VettedHaul",
-      "description": "Defensible carrier vetting and subpoena-ready audit trail for freight brokers. Captures FMCSA safety rating, CSA scores, insurance currency, and operating authority at the moment of booking. Built for the post-Montgomery v. Caribe Transport legal standard.",
+      "description": "Defensible carrier vetting and subpoena-ready audit trail for freight brokers. Built for the post-Montgomery v. Caribe Transport legal standard.",
       "homepageUrl": "https://vettedhaul.com",
       "integrityMdUrl": "https://vettedhaul.com/integrity",
       "tier": "bronze",
