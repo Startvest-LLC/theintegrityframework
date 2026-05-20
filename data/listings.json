@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "lastUpdated": "2026-04-30",
+  "lastUpdated": "2026-05-20",
   "listings": [
     {
       "slug": "hireposture",
@@ -112,6 +112,25 @@
       "lastRescannedDate": "2026-04-26",
       "state": "active",
       "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Bronze-only by design: IdeaLift is a non-compliance product and its INTEGRITY.md classifies 'Public methodology' as N/A. Authoring a faux methodology page just to clear Silver would contradict the published statement and fail Veto 6."
+    },
+    {
+      "slug": "vettedhaul",
+      "name": "VettedHaul",
+      "description": "Defensible carrier vetting and subpoena-ready audit trail for freight brokers. Captures FMCSA safety rating, CSA scores, insurance currency, and operating authority at the moment of booking. Built for the post-Montgomery v. Caribe Transport legal standard.",
+      "homepageUrl": "https://vettedhaul.com",
+      "integrityMdUrl": "https://vettedhaul.com/integrity",
+      "tier": "bronze",
+      "license": "closed-source",
+      "category": "AI for compliance & trust",
+      "operator": {
+        "name": "Startvest LLC",
+        "isDirectoryOperator": true,
+        "url": "https://startvest.ai"
+      },
+      "firstListedDate": "2026-05-20",
+      "lastRescannedDate": "2026-05-20",
+      "state": "active",
+      "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Compliance-documentation product: captures and locks public FMCSA SAFER/SMS snapshots and carrier-provided COIs at the moment of broker booking; every artifact is independently re-verifiable. Bronze-only at v1.0 by design: methodology page deferred until founding-customer cohort (first 50) stabilizes the carrier-vetting workflow. Will re-evaluate for Silver after methodology is published. INTEGRITY.md at /integrity maps all six Layer 1 vetoes."
     }
   ]
 }
