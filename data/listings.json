@@ -119,7 +119,11 @@
       "description": "Defensible carrier vetting and subpoena-ready audit trail for freight brokers. Built for the post-Montgomery v. Caribe Transport legal standard.",
       "homepageUrl": "https://vettedhaul.com",
       "integrityMdUrl": "https://vettedhaul.com/integrity",
-      "tier": "bronze",
+      "silverCredential": {
+        "kind": "methodology-page",
+        "url": "https://vettedhaul.com/methodology"
+      },
+      "tier": "silver",
       "license": "closed-source",
       "category": "AI for compliance & trust",
       "operator": {
@@ -128,9 +132,9 @@
         "url": "https://startvest.ai"
       },
       "firstListedDate": "2026-05-20",
-      "lastRescannedDate": "2026-05-20",
+      "lastRescannedDate": "2026-05-21",
       "state": "active",
-      "rationale": "First-party Startvest product. Listed at v1 launch under disclosure-asterisk per Veto 2. Compliance-documentation product: captures and locks public FMCSA SAFER/SMS snapshots and carrier-provided COIs at the moment of broker booking; every artifact is independently re-verifiable. Bronze-only at v1.0 by design: methodology page deferred until founding-customer cohort (first 50) stabilizes the carrier-vetting workflow. Will re-evaluate for Silver after methodology is published. INTEGRITY.md at /integrity maps all six Layer 1 vetoes."
+      "rationale": "First-party Startvest product. Listed under disclosure-asterisk per Veto 2. Bronze→Silver upgrade 2026-05-21 after methodology v1.0 published with Version + Changelog headings (silverCredential.methodology-page). TIF audit 10/10 PASS (4 active + 6 vacuous) per @startvest/integrity-cli v1.10.0; pre-product vacuous-pass framing honestly classified. INTEGRITY.md at https://vettedhaul.com/integrity maps all six Layer 1 vetoes. Audit matrix at /framework/cases/vettedhaul (fifth archetype: pre-product compliance tool at v1.0 launch)."
     }
   ]
 }
