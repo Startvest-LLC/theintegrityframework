@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const CANONICAL_URL = '/framework/v1';
 const FRAMEWORK_VERSION = '1.0';
+const PAGE_URL = 'https://theintegrityframework.org/framework';
 
 export const metadata: Metadata = {
   title: 'The Integrity Framework',
@@ -11,9 +12,31 @@ export const metadata: Metadata = {
   alternates: { canonical: '/framework' },
 };
 
+// Standalone DefinedTerm JSON-LD. AI Overview citation hit-rate depends on
+// a top-level DefinedTerm (not just one nested inside Article.about), so we
+// emit this as its own ld+json block. Distribution report 2026-05-22 showed
+// "the integrity framework" collapsed from #1 → #17.
+const definedTermSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${PAGE_URL}#integrity-framework`,
+  name: 'The Integrity Framework',
+  alternateName: ['Integrity Framework', 'TIF'],
+  description:
+    'A published standard for product trustworthiness aimed at sub-enterprise AI tools, the segment where SOC 2 audits do not apply. Built around five recurring failure modes that destroyed prior compliance and trust-adjacent categories (trust-arbitrage failure, theater versus substance, conflict-of-interest, black-box AI, velocity-over-rigor) and organized as three operational layers, six pre-build vetoes, seven architectural constraints, and seven operational guardrails. Published under CC BY 4.0 and forkable.',
+  inDefinedTermSet: `https://theintegrityframework.org${CANONICAL_URL}`,
+  termCode: 'integrity-framework',
+  url: PAGE_URL,
+};
+
 export default function FrameworkPage() {
   return (
-    <article className="container-wide py-16 md:py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+      />
+      <article className="container-wide py-16 md:py-20">
       <header className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-4">
           The Integrity Framework · v{FRAMEWORK_VERSION}
@@ -142,6 +165,7 @@ export default function FrameworkPage() {
           for that self-mapping.
         </p>
       </section>
-    </article>
+      </article>
+    </>
   );
 }

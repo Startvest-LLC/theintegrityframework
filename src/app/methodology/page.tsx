@@ -38,12 +38,33 @@ const articleSchema = {
   version: VERSION,
 };
 
+// Standalone DefinedTerm for "integrity framework methodology" — the keyword
+// that dropped 12.5 positions in the 2026-05-22 distribution report. The
+// Article schema alone doesn't surface "methodology" as a citable definition;
+// this block does.
+const definedTermSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${PAGE_URL}#methodology`,
+  name: 'Integrity Framework Directory methodology',
+  alternateName: ['Integrity Framework methodology', 'TIF directory methodology'],
+  description:
+    'The Integrity Framework Directory methodology is the published rubric used to evaluate listings on theintegrityframework.org. Bronze tier requires a public INTEGRITY.md self-mapping the six Layer 1 vetoes. Silver tier adds either an integrity-cli green run or a versioned methodology page. Every listing is re-scanned quarterly, on framework version bumps, and on triggered review. Delistings are published with a public note.',
+  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  termCode: 'directory-methodology',
+  url: PAGE_URL,
+};
+
 export default function MethodologyPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
       />
       <article className="container-wide py-16 md:py-20">
       <header className="max-w-3xl">

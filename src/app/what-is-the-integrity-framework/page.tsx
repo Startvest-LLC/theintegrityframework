@@ -87,11 +87,29 @@ const articleSchema = {
   },
 };
 
+// Standalone DefinedTerm. Article.about is sufficient for Article validity,
+// but AI Overviews extract top-level DefinedTerm blocks more reliably than
+// nested ones. Distribution report 2026-05-22 showed "the integrity framework"
+// collapsed from #1 → #17, so we duplicate the definition at the top level.
+const definedTermSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${PAGE_URL}#integrity-framework`,
+  name: 'The Integrity Framework',
+  alternateName: ['Integrity Framework', 'TIF'],
+  description:
+    'The Integrity Framework is a published standard for product trustworthiness aimed at sub-enterprise AI tools, the segment where SOC 2 audits do not apply. Founders self-map their product against six pre-build vetoes, post a public INTEGRITY.md, and the directory at theintegrityframework.org publishes them with a Bronze or Silver tier badge.',
+  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  termCode: 'integrity-framework',
+  url: PAGE_URL,
+};
+
 export default function WhatIsTheIntegrityFrameworkPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />
 
       <article className="container-wide py-16 md:py-20">
         <div className="max-w-3xl">

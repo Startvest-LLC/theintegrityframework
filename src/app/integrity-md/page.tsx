@@ -88,6 +88,21 @@ const articleSchema = {
   },
 };
 
+// Standalone DefinedTerm so AI Overviews citing "integrity framework spec"
+// can pull this block directly rather than reaching into Article.about.
+const definedTermSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${PAGE_URL}#integrity-md`,
+  name: 'INTEGRITY.md',
+  alternateName: ['Integrity Framework spec file', 'integrity.md'],
+  description:
+    'INTEGRITY.md is a public, founder-authored markdown file at the root of an AI product (in the repo or on the marketing site) that self-maps the product against The Integrity Framework v1.0. Bronze listings require all six Layer 1 vetoes self-mapped. Silver listings add the seven Layer 2 architectural constraints and seven Layer 3 operational guardrails. Published under CC BY 4.0.',
+  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  termCode: 'integrity-md',
+  url: PAGE_URL,
+};
+
 const TEMPLATE = `# INTEGRITY.md \u2014 <Product name>
 
 **Product:** <Product name> (<canonical-url>)
@@ -166,6 +181,7 @@ export default function IntegrityMdPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />
 
       <article className="container-wide py-16 md:py-20">
         <div className="max-w-3xl">
