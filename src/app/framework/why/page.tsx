@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const VERSION = '1.0';
 const LAST_UPDATED = '2026-04-26';
+const PAGE_URL = 'https://theintegrityframework.org/framework/why';
 
 export const metadata: Metadata = {
   title: 'Why the framework looks like this',
@@ -14,14 +15,37 @@ export const metadata: Metadata = {
     title: 'Why the Integrity Framework looks like this',
     description:
       'The reasoning behind v1.0: failure modes, three layers, six vetoes, published openly. The engineering rationale.',
-    url: 'https://theintegrityframework.org/framework/why',
+    url: PAGE_URL,
     publishedTime: `${LAST_UPDATED}T00:00:00Z`,
   },
 };
 
+// DefinedTerm for "sub-enterprise trust signal" — the keyword that collapsed
+// 23.2 positions (#1 → #24.2) in the 2026-05-22 distribution report. The
+// Integrity Framework is the sub-enterprise trust signal; this page is where
+// the reasoning behind that positioning lives, so the definition is anchored
+// here.
+const definedTermSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${PAGE_URL}#sub-enterprise-trust-signal`,
+  name: 'Sub-enterprise trust signal',
+  alternateName: ['Sub-enterprise AI trust', 'Trust signal for sub-enterprise AI tools'],
+  description:
+    'A sub-enterprise trust signal is a verifiable indicator of product trustworthiness designed for AI tools below the enterprise tier, where SOC 2 audits do not apply because the audit price exceeds the entire product budget. The Integrity Framework is the published sub-enterprise trust signal: founders self-map their product against six pre-build vetoes, post a public INTEGRITY.md, and a public directory at theintegrityframework.org lists them with a Bronze or Silver tier badge.',
+  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  termCode: 'sub-enterprise-trust-signal',
+  url: PAGE_URL,
+};
+
 export default function FrameworkWhyPage() {
   return (
-    <article className="container-wide py-16 md:py-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+      />
+      <article className="container-wide py-16 md:py-24">
       <header className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-4">
           Framework · reasoning · v{VERSION}
@@ -372,7 +396,8 @@ export default function FrameworkWhyPage() {
         </a>
         . CC BY 4.0. The only request is the version-and-changelog discipline.
       </p>
-    </article>
+      </article>
+    </>
   );
 }
 
