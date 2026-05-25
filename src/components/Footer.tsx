@@ -44,7 +44,15 @@ export function Footer() {
         </div>
       </div>
       <div className="container-wide pb-8 text-xs text-surface-500">
-        Directory v{site.directoryVersion} · Framework v{site.frameworkVersion}
+        Directory v{site.directoryVersion} · Framework v{site.frameworkVersion} · Published by{' '}
+        <a
+          href="https://startvest.ai"
+          rel="nofollow"
+          className="text-surface-600 no-underline hover:text-brand-700"
+        >
+          {site.publisher}
+        </a>
+        .
       </div>
     </footer>
   );

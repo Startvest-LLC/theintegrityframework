@@ -102,6 +102,11 @@ const definedTermSchema = {
   inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
   termCode: 'integrity-framework',
   url: PAGE_URL,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Startvest LLC',
+    url: 'https://startvest.ai',
+  },
 };
 
 export default function WhatIsTheIntegrityFrameworkPage() {
