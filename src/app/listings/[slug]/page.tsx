@@ -4,6 +4,33 @@ import { notFound } from 'next/navigation';
 import { TierBadge } from '@/components/TierBadge';
 import { getAllListingSlugs, getListingBySlug, getRescanHistory } from '@/lib/listings';
 
+// Sister Startvest-portfolio brands. Outbound links to these hosts on
+// programmatically-repeated directory pages get rel="nofollow" to avoid the
+// cross-network link-cluster pattern that triggered Google's link-spam
+// classifier on 2026-05-06 (see Startvest-LLC/idealift#2716).
+const SISTER_BRAND_HOSTS = new Set([
+  'idealift.app',
+  'claritylift.ai',
+  'fieldledger.us',
+  'hireposture.com',
+  'prapi.dev',
+  'vettedhaul.com',
+  'startvest.ai',
+  'adacompliancedocs.com',
+]);
+
+function relForOutbound(url: string | undefined): string {
+  const base = 'noreferrer noopener';
+  if (!url) return base;
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '');
+    if (SISTER_BRAND_HOSTS.has(host)) return `${base} nofollow`;
+  } catch {
+    // ignore unparseable URLs
+  }
+  return base;
+}
+
 export function generateStaticParams() {
   return getAllListingSlugs().map((slug) => ({ slug }));
 }
@@ -99,7 +126,11 @@ export default async function ListingDetailPage({
                 <div>
                   <dt className="text-surface-500">Homepage</dt>
                   <dd>
-                    <a href={listing.homepageUrl} target="_blank" rel="noreferrer noopener">
+                    <a
+                      href={listing.homepageUrl}
+                      target="_blank"
+                      rel={relForOutbound(listing.homepageUrl)}
+                    >
                       {listing.homepageUrl}
                     </a>
                   </dd>
@@ -107,7 +138,11 @@ export default async function ListingDetailPage({
                 <div>
                   <dt className="text-surface-500">INTEGRITY.md</dt>
                   <dd>
-                    <a href={listing.integrityMdUrl} target="_blank" rel="noreferrer noopener">
+                    <a
+                      href={listing.integrityMdUrl}
+                      target="_blank"
+                      rel={relForOutbound(listing.integrityMdUrl)}
+                    >
                       {listing.integrityMdUrl}
                     </a>
                   </dd>
@@ -122,7 +157,11 @@ export default async function ListingDetailPage({
                     </dt>
                     <dd>
                       {credentialLink && (
-                        <a href={credentialLink} target="_blank" rel="noreferrer noopener">
+                        <a
+                          href={credentialLink}
+                          target="_blank"
+                          rel={relForOutbound(credentialLink)}
+                        >
                           {credentialLink}
                         </a>
                       )}
@@ -188,7 +227,11 @@ export default async function ListingDetailPage({
               </div>
               <div className="mt-1">
                 {listing.operator.url ? (
-                  <a href={listing.operator.url} target="_blank" rel="noreferrer noopener">
+                  <a
+                    href={listing.operator.url}
+                    target="_blank"
+                    rel={relForOutbound(listing.operator.url)}
+                  >
                     {listing.operator.name}
                   </a>
                 ) : (
