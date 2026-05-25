@@ -33,7 +33,7 @@ const definedTermSchema = {
   alternateName: ['Sub-enterprise AI trust', 'Trust signal for sub-enterprise AI tools'],
   description:
     'A sub-enterprise trust signal is a verifiable indicator of product trustworthiness designed for AI tools below the enterprise tier, where SOC 2 audits do not apply because the audit price exceeds the entire product budget. The Integrity Framework is the published sub-enterprise trust signal: founders self-map their product against six pre-build vetoes, post a public INTEGRITY.md, and a public directory at theintegrityframework.org lists them with a Bronze or Silver tier badge.',
-  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
   termCode: 'sub-enterprise-trust-signal',
   url: PAGE_URL,
   publisher: {

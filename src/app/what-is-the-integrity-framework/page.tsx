@@ -82,7 +82,7 @@ const articleSchema = {
     name: 'The Integrity Framework',
     description:
       'A standard for product trustworthiness for sub-enterprise AI tools where SOC 2 does not apply.',
-    inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+    inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
     termCode: 'integrity-framework',
   },
 };
@@ -99,7 +99,7 @@ const definedTermSchema = {
   alternateName: ['Integrity Framework', 'TIF'],
   description:
     'The Integrity Framework is a published standard for product trustworthiness aimed at sub-enterprise AI tools, the segment where SOC 2 audits do not apply. Founders self-map their product against six pre-build vetoes, post a public INTEGRITY.md, and the directory at theintegrityframework.org publishes them with a Bronze or Silver tier badge.',
-  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
   termCode: 'integrity-framework',
   url: PAGE_URL,
   publisher: {

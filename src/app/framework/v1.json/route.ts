@@ -102,7 +102,7 @@ function buildPayload() {
         identifier: v.code,
         name: v.name,
         description: v.description,
-        inDefinedTermSet: FRAMEWORK_URL,
+        inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
       })),
     },
     audience: {

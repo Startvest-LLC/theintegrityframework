@@ -83,7 +83,7 @@ const articleSchema = {
     name: 'INTEGRITY.md',
     description:
       'A public, founder-authored file at the root of an AI product that self-maps the product against The Integrity Framework v1.0.',
-    inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+    inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
     termCode: 'integrity-md',
   },
 };
@@ -98,7 +98,7 @@ const definedTermSchema = {
   alternateName: ['Integrity Framework spec file', 'integrity.md'],
   description:
     'INTEGRITY.md is a public, founder-authored markdown file at the root of an AI product (in the repo or on the marketing site) that self-maps the product against The Integrity Framework v1.0. Bronze listings require all six Layer 1 vetoes self-mapped. Silver listings add the seven Layer 2 architectural constraints and seven Layer 3 operational guardrails. Published under CC BY 4.0.',
-  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
   termCode: 'integrity-md',
   url: PAGE_URL,
   publisher: {
