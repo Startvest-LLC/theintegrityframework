@@ -2,9 +2,23 @@ import type { MetadataRoute } from 'next';
 import { getActiveListings } from '@/lib/listings';
 import { site } from '@/lib/site';
 
+// Stable, content-meaningful lastmod for static URLs.
+//
+// Previously every URL used `lastModified: new Date()` evaluated per
+// request — Google sees every URL changing every fetch, ignores lastmod
+// as a freshness signal, and de-prioritizes the sitemap. Discovered
+// 2026-05-25 via URL Inspection sweep on the sister prapi.dev property
+// (110 of 118 URLs reported as "URL is unknown to Google" with the same
+// bug; GSC last successfully read the sitemap 19 days prior).
+//
+// Bump this constant when adding routes or doing real content edits.
+// Don't bump for cosmetic changes — false bumps rebuild the noise
+// reputation we just escaped.
+const CONTENT_LAST_UPDATED = new Date('2026-05-25T00:00:00Z');
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, '');
-  const lastModified = new Date();
+  const lastModified = CONTENT_LAST_UPDATED;
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified, changeFrequency: 'weekly', priority: 1.0 },
