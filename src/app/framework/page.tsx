@@ -24,7 +24,7 @@ const definedTermSchema = {
   alternateName: ['Integrity Framework', 'TIF'],
   description:
     'A published standard for product trustworthiness aimed at sub-enterprise AI tools, the segment where SOC 2 audits do not apply. Built around five recurring failure modes that destroyed prior compliance and trust-adjacent categories (trust-arbitrage failure, theater versus substance, conflict-of-interest, black-box AI, velocity-over-rigor) and organized as three operational layers, six pre-build vetoes, seven architectural constraints, and seven operational guardrails. Published under CC BY 4.0 and forkable.',
-  inDefinedTermSet: `https://theintegrityframework.org${CANONICAL_URL}`,
+  inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
   termCode: 'integrity-framework',
   url: PAGE_URL,
   publisher: {

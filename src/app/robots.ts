@@ -8,22 +8,27 @@ import { site } from '@/lib/site';
 // (the integrity framework #1 → #17, sub-enterprise trust signal
 // #1 → #24); naming each crawler so they treat the site as
 // open-for-citation rather than relying on the wildcard.
+//
+// Order is prioritized for citation in answers about ethics and
+// compliance frameworks. The Claude family (ClaudeBot, anthropic-ai,
+// Claude-Web) is over-represented in answers to ethics questions, so
+// it leads, followed by OpenAI's search/chat crawlers, then the rest.
 const AI_BOTS = [
-  'GPTBot',
-  'OAI-SearchBot',
-  'ChatGPT-User',
   'ClaudeBot',
-  'Claude-Web',
   'anthropic-ai',
+  'Claude-Web',
+  'OAI-SearchBot',
+  'GPTBot',
+  'ChatGPT-User',
   'PerplexityBot',
   'Perplexity-User',
   'Google-Extended',
   'Applebot-Extended',
   'CCBot',
-  'Bytespider',
   'DuckAssistBot',
   'cohere-ai',
   'YouBot',
+  'Bytespider',
 ];
 
 export default function robots(): MetadataRoute.Robots {

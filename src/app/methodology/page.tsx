@@ -50,7 +50,7 @@ const definedTermSchema = {
   alternateName: ['Integrity Framework methodology', 'TIF directory methodology'],
   description:
     'The Integrity Framework Directory methodology is the published rubric used to evaluate listings on theintegrityframework.org. Bronze tier requires a public INTEGRITY.md self-mapping the six Layer 1 vetoes. Silver tier adds either an integrity-cli green run or a versioned methodology page. Every listing is re-scanned quarterly, on framework version bumps, and on triggered review. Delistings are published with a public note.',
-  inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+  inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
   termCode: 'directory-methodology',
   url: PAGE_URL,
   publisher: {

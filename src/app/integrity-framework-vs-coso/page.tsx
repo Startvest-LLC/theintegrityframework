@@ -84,7 +84,7 @@ const articleSchema = {
       name: 'The Integrity Framework',
       description:
         "Startvest's published standard for product trustworthiness in sub-enterprise AI tools where SOC 2 does not apply.",
-      inDefinedTermSet: 'https://theintegrityframework.org/framework/v1',
+      inDefinedTermSet: 'Sub-enterprise trust + Integrity Framework vocabulary',
       termCode: 'integrity-framework',
     },
     {
