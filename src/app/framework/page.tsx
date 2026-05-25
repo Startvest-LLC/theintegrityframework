@@ -27,6 +27,11 @@ const definedTermSchema = {
   inDefinedTermSet: `https://theintegrityframework.org${CANONICAL_URL}`,
   termCode: 'integrity-framework',
   url: PAGE_URL,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Startvest LLC',
+    url: 'https://startvest.ai',
+  },
 };
 
 export default function FrameworkPage() {
