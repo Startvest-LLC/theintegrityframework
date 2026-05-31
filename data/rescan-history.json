@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-05-31",
   "history": {
     "claritylift": [
       {
@@ -25,6 +25,11 @@
       },
       {
         "date": "2026-05-24",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "date": "2026-05-31",
         "passed": true,
         "issues": []
       }
@@ -58,6 +63,15 @@
           "integrityMdUrl returned HTTP 0 (fetch failed)",
           "Silver methodology page returned HTTP 0 (fetch failed)"
         ]
+      },
+      {
+        "date": "2026-05-31",
+        "passed": false,
+        "issues": [
+          "homepageUrl returned HTTP 0 (fetch failed)",
+          "integrityMdUrl returned HTTP 0 (fetch failed)",
+          "Silver methodology page returned HTTP 0 (fetch failed)"
+        ]
       }
     ],
     "fieldledger": [
@@ -83,6 +97,11 @@
       },
       {
         "date": "2026-05-24",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "date": "2026-05-31",
         "passed": true,
         "issues": []
       }
@@ -112,6 +131,11 @@
         "date": "2026-05-24",
         "passed": true,
         "issues": []
+      },
+      {
+        "date": "2026-05-31",
+        "passed": true,
+        "issues": []
       }
     ],
     "hireposture": [
@@ -134,11 +158,21 @@
         "date": "2026-05-24",
         "passed": true,
         "issues": []
+      },
+      {
+        "date": "2026-05-31",
+        "passed": true,
+        "issues": []
       }
     ],
     "vettedhaul": [
       {
         "date": "2026-05-24",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "date": "2026-05-31",
         "passed": true,
         "issues": []
       }
