@@ -61,14 +61,6 @@ const CASES = [
     date: '2026-04-29',
   },
   {
-    slug: 'adacompliancedocs',
-    title: 'adacompliancedocs, the validation-gate axis',
-    summary:
-      "Fifth internal portfolio audit. Surfaced a structurally new Layer 2 shape — customer-attestation-validation-gate. A customer-attested status field cannot publish until system-verified evidence supports it. Drove v1.9.0, the third C3 axis.",
-    kind: 'Internal — portfolio audit',
-    date: '2026-04-29',
-  },
-  {
     slug: 'marketing-agent',
     title: 'marketing-agent, the constraint-file pattern',
     summary:

@@ -35,7 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/framework/cases/claritylift`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/framework/cases/idealift`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/framework/cases/hireposture`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/framework/cases/adacompliancedocs`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/framework/cases/marketing-agent`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/what-is-the-integrity-framework`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/integrity-framework-vs-coso`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
