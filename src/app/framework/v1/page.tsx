@@ -56,12 +56,84 @@ const articleStructuredData = {
   license: 'https://creativecommons.org/licenses/by/4.0/',
 };
 
+// DefinedTerm + FAQPage so AI Overviews have a citable definition of the spec.
+// The page ranks for "integrity framework spec / methodology / v1" but only
+// emitted Article schema, so it was not being cited. Sourced from page content.
+const definedTermStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  name: 'The Integrity Framework v1.0',
+  description:
+    'The Integrity Framework v1.0 is a published standard for building compliance and trust-adjacent products under structural commitments. It defines three operational layers (pre-build vetoes, architectural constraints, operational guardrails), an eight-layer moat model, and a six-question vendor scorecard. Originated by Startvest LLC and published under CC BY 4.0.',
+  url: PAGE_URL,
+  inDefinedTermSet: {
+    '@type': 'DefinedTermSet',
+    name: 'Integrity Framework vocabulary',
+    url: PAGE_URL,
+  },
+};
+
+const faqStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the Integrity Framework methodology?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The Integrity Framework is a published standard for building compliance and trust-adjacent products under structural commitments. It defines three operational layers (pre-build vetoes, architectural constraints, operational guardrails), an eight-layer moat model, and a six-question vendor scorecard. It is reverse-engineered from the five recurring failure modes that have destroyed compliance categories before.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the three layers of the Integrity Framework?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Layer 1 is six pre-build vetoes evaluated before a product is built; a wrong answer kills the product. Layer 2 is seven architectural constraints baked into every product and CI-enforced where possible. Layer 3 is seven operational guardrails that keep the business model from turning sour over time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Integrity Framework free to use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The framework is published under Creative Commons Attribution 4.0 (CC BY 4.0). You can copy, modify, and redistribute it, including for commercial use, provided you give credit and link to the original frozen version. There is no license fee. Adoption is the point.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I cite the Integrity Framework?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Cite the frozen version URL when the wording matters: ${PAGE_URL}. Cite the latest URL (theintegrityframework.org/framework) when the principle matters. In your product's INTEGRITY.md, link the frozen version you operate against and bump the link in your changelog when you upgrade.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the Integrity Framework vendor scorecard?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The vendor scorecard is six yes/no questions used to score any compliance or trust-adjacent vendor: public methodology page, refund-on-failure clause in the standard MSA, annual independent third-party audit with public findings, per-product INTEGRITY.md in the public repo, structurally enforced AI output review gate, and public kill criteria with specific thresholds. One point per yes; a score below five is information.',
+      },
+    },
+  ],
+};
+
 export default function FrameworkV1Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
 
       <article className="bg-white">
@@ -737,6 +809,17 @@ export default function FrameworkV1Page() {
               to this URL on {RELOCATED_DATE}; v1.0 wording is unchanged.
             </li>
           </ul>
+        </Section>
+
+        <Section id="faq" title="Frequently asked questions">
+          <dl className="space-y-6">
+            {faqStructuredData.mainEntity.map((qa) => (
+              <div key={qa.name}>
+                <dt className="font-semibold text-surface-900">{qa.name}</dt>
+                <dd className="mt-2 text-surface-600">{qa.acceptedAnswer.text}</dd>
+              </div>
+            ))}
+          </dl>
         </Section>
 
         <section className="px-4 sm:px-6 lg:px-8 py-12 bg-surface-50 border-t border-surface-200">
