@@ -34,46 +34,6 @@
         "issues": []
       }
     ],
-    "adacompliancedocs": [
-      {
-        "date": "2026-04-26",
-        "passed": true,
-        "issues": []
-      },
-      {
-        "date": "2026-05-03",
-        "passed": true,
-        "issues": []
-      },
-      {
-        "date": "2026-05-10",
-        "passed": true,
-        "issues": []
-      },
-      {
-        "date": "2026-05-17",
-        "passed": true,
-        "issues": []
-      },
-      {
-        "date": "2026-05-24",
-        "passed": false,
-        "issues": [
-          "homepageUrl returned HTTP 0 (fetch failed)",
-          "integrityMdUrl returned HTTP 0 (fetch failed)",
-          "Silver methodology page returned HTTP 0 (fetch failed)"
-        ]
-      },
-      {
-        "date": "2026-05-31",
-        "passed": false,
-        "issues": [
-          "homepageUrl returned HTTP 0 (fetch failed)",
-          "integrityMdUrl returned HTTP 0 (fetch failed)",
-          "Silver methodology page returned HTTP 0 (fetch failed)"
-        ]
-      }
-    ],
     "fieldledger": [
       {
         "date": "2026-04-26",
