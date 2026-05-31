@@ -30,7 +30,6 @@ const REVISIONS: Revision[] = [
     version: '1.9.0',
     date: '2026-04-29',
     trigger: 'ADAComplianceDocs',
-    triggerSlug: 'adacompliancedocs',
     summary:
       "Added CRIT-SV-CUSTOMER-ATTESTATION-VALIDATION-GATE — third C3 axis. Provenance markers (v1.4.0+ output, v1.8.0 input) say WHERE customer-attested data came from. Validation gates say WHEN it may publish. Co-occurrence rule: trigger on customer-attested status column declarations; require any validation-gate function pattern (checkConformance, conformanceGuard, validateBeforePublish, acknowledgeOpenFindings) somewhere in the corpus. Vacuous-pass when no trigger fires. Closes framework #14.",
     ruleId: 'CRIT-SV-CUSTOMER-ATTESTATION-VALIDATION-GATE',

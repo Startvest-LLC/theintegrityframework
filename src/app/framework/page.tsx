@@ -126,17 +126,16 @@ export default function FrameworkPage() {
           across two days during the first portfolio audit cycle (v1.2.0 → v1.10.0).
         </p>
         <p className="mt-3 text-surface-700">
-          Seven case studies live at{' '}
+          Six case studies live at{' '}
           <Link href="/framework/cases" className="text-brand-700">/framework/cases</Link>. One
           external (
           <Link href="/framework/cases/delve" className="text-brand-700">Delve</Link>, walking a
           publicly-reported failure through the framework — teaching material, citing public
-          reporting only) and six internal portfolio audits across six product types:{' '}
+          reporting only) and five internal portfolio audits:{' '}
           <Link href="/framework/cases/fieldledger" className="text-brand-700">FieldLedger</Link>,{' '}
           <Link href="/framework/cases/claritylift" className="text-brand-700">ClarityLift</Link>,{' '}
           <Link href="/framework/cases/idealift" className="text-brand-700">IdeaLift</Link>,{' '}
           <Link href="/framework/cases/hireposture" className="text-brand-700">Hireposture</Link>,{' '}
-          <Link href="/framework/cases/adacompliancedocs" className="text-brand-700">adacompliancedocs</Link>,
           and{' '}
           <Link href="/framework/cases/marketing-agent" className="text-brand-700">marketing-agent</Link>.
           Each case publishes the headline finding, layer summary, framework revisions triggered,

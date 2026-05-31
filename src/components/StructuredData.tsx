@@ -27,7 +27,6 @@ export default function StructuredData() {
       'https://claritylift.ai',
       'https://fieldledger.us',
       'https://hireposture.com',
-      'https://www.adacompliancedocs.com',
     ],
   };
 
