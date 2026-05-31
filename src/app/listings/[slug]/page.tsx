@@ -16,7 +16,6 @@ const SISTER_BRAND_HOSTS = new Set([
   'prapi.dev',
   'vettedhaul.com',
   'startvest.ai',
-  'adacompliancedocs.com',
 ]);
 
 function relForOutbound(url: string | undefined): string {

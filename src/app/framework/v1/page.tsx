@@ -553,8 +553,8 @@ export default function FrameworkV1Page() {
             that govern Startvest listings on the directory apply here.
           </p>
           <p className="font-medium text-surface-900">
-            Baseline published at 2 / 6 and 3 / 6 the day v1.0 shipped. Now at 4 / 6 across all
-            three products. Closing the remaining gaps in public.
+            Baseline published at 2 / 6 and 3 / 6 the day v1.0 shipped. Now at 4 / 6 across both
+            products. Closing the remaining gaps in public.
           </p>
           <div className="mt-6 rounded-xl border border-surface-200 bg-white overflow-hidden">
             <SelfGradeRow
@@ -572,14 +572,6 @@ export default function FrameworkV1Page() {
               gaps="MSA refund clause (drafted, finalization in flight). Annual third-party audit deferred pending external funding."
               integrityHref="https://github.com/Startvest-LLC/FieldLedger/blob/master/INTEGRITY.md"
               productHref="https://fieldledger.us"
-            />
-            <SelfGradeRow
-              product="adacompliancedocs"
-              score="4 YES / 0 PARTIAL / 2 NO"
-              tier="4 / 6"
-              gaps="MSA refund clause (drafted, finalization in flight). Annual third-party audit deferred pending external funding."
-              integrityHref="https://github.com/Startvest-LLC/adacompliancedocs/blob/main/INTEGRITY.md"
-              productHref="https://www.adacompliancedocs.com"
             />
           </div>
           <p className="mt-6 text-surface-700">
