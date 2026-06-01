@@ -1,0 +1,169 @@
+---
+title: "How to Write integrity.md: The Complete Implementation Guide for Technical Teams"
+description: "Learn how to write integrity.md files with this complete technical implementation guide including code examples, CI/CD integration, and automated verification patterns."
+slug: "how-to-write-integrity-md"
+publishedAt: "2026-06-01"
+keyword: "how to write integrity.md"
+primaryKeyword: "how to write integrity.md"
+format: "howto"
+sourceBriefId: "2FE5E4D5-2240-4E07-9182-0DF2D8F3103E"
+author: "Theintegrityframework"
+heroImage: "images/how-to-write-integrity-md.png"
+canonical: null
+---
+<img src="/blog-images/how-to-write-integrity-md.png" alt="How to Write integrity.md: The Complete Implementation Guide for Technical Teams" width="1536" height="1024" />
+
+# How to Write integrity.md: The Complete Implementation Guide for Technical Teams
+
+How to write integrity.md is a standardized approach for documenting software integrity declarations, security commitments, and compliance requirements within your codebase. The Integrity Framework implements this methodology through automated verification systems and cryptographic validation that transforms traditional documentation into executable compliance artifacts.
+
+## Essential Structure and Format Requirements for integrity.md Files
+
+The integrity.md file follows a specific markdown structure that machines and humans can parse reliably. Every integrity.md file begins with a metadata header containing the project name, version, and timestamp. This header uses YAML frontmatter syntax enclosed in triple dashes.
+
+```yaml
+---
+project: "authentication-service"
+version: "2.1.4"
+integrity_framework_version: "1.0"
+generated: "2024-01-15T14:30:00Z"
+maintainer: "security-team@company.com"
+---
+```
+
+The main body contains four required sections: Security Commitments, Data Handling, Dependencies, and Compliance Statements. Each section uses H2 headings with consistent naming conventions. Security Commitments document encryption standards, authentication mechanisms, and access controls. Data Handling describes how sensitive information moves through your system.
+
+Dependencies list all external packages, libraries, and services with their integrity hashes. This section prevents supply chain attacks by creating a verifiable manifest. The Compliance Statements section maps your implementation to specific regulatory requirements like SOC 2, GDPR, or HIPAA.
+
+File naming must be exact. Use `integrity.md` in lowercase, placed in your repository root directory alongside README.md. The file encoding should be UTF-8 without BOM. Line endings follow Unix conventions (LF only).
+
+## Step-by-Step Process for Writing Your First integrity.md
+
+Start by creating the metadata header with your project details. Use semantic versioning for the version field and ISO 8601 timestamps for the generated field. The integrity_framework_version should match the latest specification release.
+
+Next, document your security commitments using specific, measurable statements. Instead of writing "We protect user data," specify "All user passwords use bcrypt with cost factor 12. API tokens expire after 24 hours. Database connections require TLS 1.3 with certificate pinning." Each commitment should be verifiable through code inspection or automated testing.
+
+For the data handling section, create a flow diagram using markdown text. List every data type your application processes, where it originates, how it transforms, and where it terminates. Include retention periods and deletion procedures. Mark sensitive data with classification labels like PUBLIC, INTERNAL, CONFIDENTIAL, or RESTRICTED.
+
+Document dependencies with their exact versions and SHA-256 hashes. Use npm audit, pip-audit, or equivalent tools to generate initial dependency lists. For each critical dependency, include the security justification for its inclusion and the review process for updates.
+
+Complete the file by mapping your implementation to relevant compliance frameworks. Reference specific control numbers and implementation details. For example, "SOC 2 CC6.1 implemented through role-based access control in auth/rbac.py lines 45-78."
+
+## Common Integrity Declarations and Code Examples
+
+Authentication integrity declarations specify your identity verification approach. A typical declaration includes the authentication method, session management, and multi-factor requirements:
+
+```markdown
+## Security Commitments
+
+### Authentication
+- Primary authentication: OAuth 2.0 with PKCE
+- Session tokens: JWT with RS256 signatures, 15-minute expiration
+- MFA required for admin accounts using TOTP (RFC 6238)
+- Password policy: minimum 12 characters, complexity requirements enforced
+```
+
+Data encryption declarations document both data at rest and in transit protections. Include cipher suites, key management procedures, and rotation schedules:
+
+```markdown
+### Encryption
+- Data at rest: AES-256-GCM with customer-managed keys
+- Data in transit: TLS 1.3 with perfect forward secrecy
+- Key rotation: automated every 90 days
+- Certificate management: automated via Let's Encrypt with 30-day renewal
+```
+
+Logging and monitoring commitments establish your security observability baseline. Specify what events you log, retention periods, and alert thresholds:
+
+```markdown
+### Security Monitoring
+- Authentication events logged to central SIEM
+- Failed login alerts after 5 attempts within 10 minutes
+- Log retention: 1 year for security events, 30 days for operational logs
+- PII scrubbed from all log outputs using automated regex patterns
+```
+
+Access control declarations define your authorization model with specific role definitions and permission matrices. Include emergency access procedures and audit requirements.
+
+## Integration with CI/CD Pipelines and Automated Verification
+
+Automated integrity verification prevents configuration drift and ensures your integrity.md file stays current with your actual implementation. GitHub Actions provides the most straightforward integration approach for most teams.
+
+Create a workflow file at `.github/workflows/integrity-check.yml` that runs on every pull request and commit to main. The workflow should parse your integrity.md file, extract verifiable claims, and test them against your codebase:
+
+```yaml
+name: Integrity Verification
+on: [push, pull_request]
+jobs:
+  verify-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install integrity-framework
+        run: npm install -g @integrity-framework/cli
+      - name: Verify integrity declarations
+        run: integrity-verify --config integrity.md --strict
+```
+
+The verification process checks dependency hashes against your package manifests, validates encryption configuration against your deployment scripts, and confirms compliance mappings reference actual code implementations. Failed verifications block deployments until teams resolve the discrepancies.
+
+For more advanced verification, integrate integrity checking with your security scanning tools. Snyk, OWASP Dependency-Check, and Semgrep can all consume integrity.md files to customize their scanning rules. This integration creates a feedback loop where security tools validate your declarations while your declarations guide security tool configuration.
+
+Set up branch protection rules that require integrity verification before merging. This requirement ensures teams update integrity documentation alongside code changes. Configure the integrity-framework CLI to generate detailed reports showing which claims were verified, which failed, and which require manual review.
+
+## Advanced Features: Cryptographic Signatures and Compliance Mapping
+
+Cryptographic signatures transform integrity.md files from documentation into tamper-evident compliance artifacts. The integrity framework supports multiple signature schemes including PGP, Minisign, and Sigstore for different security requirements.
+
+To implement PGP signatures, generate a dedicated signing key for your integrity declarations. Store the private key in your CI/CD secret management system and publish the public key in your repository's `.well-known/integrity-keys/` directory:
+
+```bash
+gpg --generate-key --batch <<EOF
+Key-Type: RSA
+Key-Length: 4096
+Name-Real: Integrity Framework
+Name-Email: integrity@yourcompany.com
+Expire-Date: 1y
+%commit
+EOF
+```
+
+Sign your integrity.md file during the build process and include the signature in your deployment artifacts. Consumers can verify the signature before trusting your integrity declarations:
+
+```bash
+gpg --detach-sign --armor integrity.md
+# Creates integrity.md.asc signature file
+```
+
+Compliance mapping connects your technical implementations to specific regulatory requirements. Create a compliance matrix that maps each section of your integrity.md to relevant controls:
+
+```markdown
+## Compliance Mapping
+
+### SOC 2 Type II
+- CC6.1 (Logical Access): Authentication section, lines 23-31
+- CC6.2 (System Credentials): Dependencies section, credential management
+- CC6.3 (Network Security): Encryption section, TLS configuration
+
+### GDPR
+- Article 32 (Security): Entire Security Commitments section
+- Article 30 (Records): Data Handling section, retention policies
+```
+
+Advanced teams can implement automated compliance reporting that generates audit-ready documentation from integrity.md files. Tools like GRC automation platforms can consume structured integrity data to populate compliance dashboards and generate evidence packages.
+
+## Troubleshooting and Validation Best Practices
+
+Common validation errors occur when integrity declarations don't match actual implementations. The most frequent issue involves dependency version mismatches where teams update packages without updating integrity.md files. Set up pre-commit hooks that automatically regenerate dependency sections to prevent this drift.
+
+Syntax errors in the YAML frontmatter break automated parsing. Use a YAML validator in your editor and include schema validation in your CI pipeline. The integrity-framework provides JSON schemas for validating both metadata and content sections.
+
+Missing or incomplete compliance mappings create audit risks. Each compliance statement should reference specific code locations, configuration files, or deployment artifacts. Avoid vague statements like "security implemented throughout the application." Instead, provide precise references: "TLS configuration in kubernetes/deployments/api.yaml lines 67-72."
+
+Performance issues arise when verification processes become too comprehensive. Balance thoroughness with build times by categorizing checks into fast basic validation and slower comprehensive audits. Run comprehensive audits on release branches while using basic validation for feature branches.
+
+Version control conflicts commonly occur in the metadata header when multiple developers update integrity.md simultaneously. Use automated timestamp updates in your CI pipeline and avoid manual timestamp edits. Configure git merge strategies that automatically resolve timestamp conflicts in favor of the newest version.
+
+Team adoption improves when you provide clear examples and templates. Create integrity.md templates for different project types (web applications, APIs, data services) and maintain them in a central repository. Include commented examples showing both minimal and comprehensive implementations.
+
+Regular integrity audits should compare your integrity.md declarations against actual system behavior. Schedule quarterly reviews where security teams validate random samples of integrity claims through code inspection and penetration testing. Document findings in your integrity.md file's revision history to demonstrate continuous improvement.
