@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { getActiveListings } from '@/lib/listings';
 import { site } from '@/lib/site';
+import { SPEC_TOPICS } from '@/lib/spec-topics';
+import { IMPLEMENTATIONS } from '@/lib/implementations';
+import { CERTIFICATIONS } from '@/lib/certifications';
 
 // Stable, content-meaningful lastmod for static URLs.
 //
@@ -43,10 +46,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/how-to-vet-ai-tools`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/how-to-write-an-integrity-md`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/methodology`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/spec`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/implementation`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/certifications`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/changelog`, lastModified, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/submit`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/submit/form`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
   ];
+
+  const specTopicRoutes: MetadataRoute.Sitemap = SPEC_TOPICS.map((t) => ({
+    url: `${base}/spec/${t.slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
+
+  const implementationRoutes: MetadataRoute.Sitemap = IMPLEMENTATIONS.map((i) => ({
+    url: `${base}/implementation/${i.slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
+
+  const certificationRoutes: MetadataRoute.Sitemap = CERTIFICATIONS.map((c) => ({
+    url: `${base}/certifications/${c.slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
 
   const listingRoutes: MetadataRoute.Sitemap = getActiveListings().map((l) => ({
     url: `${base}/listings/${l.slug}`,
@@ -55,5 +82,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...listingRoutes];
+  return [
+    ...staticRoutes,
+    ...specTopicRoutes,
+    ...implementationRoutes,
+    ...certificationRoutes,
+    ...listingRoutes,
+  ];
 }
